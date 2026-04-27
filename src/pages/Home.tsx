@@ -135,28 +135,24 @@ const Home = () => {
       {/* PORTFOLIO TEASER */}
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container-wide">
-          <div className="grid gap-12 lg:grid-cols-12 items-end mb-12">
+          <div className="grid gap-12 lg:grid-cols-12 items-end mb-14">
             <div className="lg:col-span-7">
-              <div className="eyebrow text-primary-foreground/60 mb-4">Selected work</div>
-              <h2 className="text-4xl md:text-5xl text-primary-foreground">
+              <div className="eyebrow text-primary-foreground/50 mb-4">Selected work</div>
+              <h2 className="text-4xl md:text-5xl text-primary-foreground font-normal">
                 Buildings that breathe wood.
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="text-primary-foreground/70 leading-relaxed">
+              <p className="text-primary-foreground/60 leading-relaxed font-light">
                 Architects across Europe choose us for façades, interiors and
                 bespoke timber elements. Here's a glimpse of what's possible.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {projects.slice(0, 3).map((proj) => (
-              <Link
-                key={proj.id}
-                to={`/portfolio/${proj.id}`}
-                className="group block"
-              >
+              <Link key={proj.id} to={`/portfolio/${proj.id}`} className="group block">
                 <div className="aspect-[4/5] overflow-hidden bg-muted/20">
                   <img
                     src={proj.cover}
@@ -167,10 +163,10 @@ const Home = () => {
                 </div>
                 <div className="pt-4 flex items-start justify-between">
                   <div>
-                    <h3 className="text-primary-foreground text-xl">{proj.title}</h3>
-                    <p className="text-sm text-primary-foreground/60">{proj.location}</p>
+                    <h3 className="text-primary-foreground text-lg font-normal">{proj.title}</h3>
+                    <p className="text-sm text-primary-foreground/50 font-light">{proj.location}</p>
                   </div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-accent">{proj.category}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50 pt-2">{proj.category}</span>
                 </div>
               </Link>
             ))}
