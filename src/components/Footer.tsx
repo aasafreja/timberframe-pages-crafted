@@ -23,7 +23,7 @@ export const Footer = () => (
             <a
               key={i}
               href={href}
-              className="h-9 w-9 grid place-items-center border border-primary-foreground/20 hover:border-accent hover:text-accent transition-colors"
+              className="h-9 w-9 grid place-items-center border border-primary-foreground/20 hover:border-primary-foreground/60 hover:text-primary-foreground/70 transition-colors"
               aria-label="Social"
             >
               <Icon size={16} />
@@ -49,7 +49,7 @@ export const Footer = () => (
             <li key={to}>
               <Link
                 to={to}
-                className="text-primary-foreground/70 hover:text-accent transition-colors"
+                className="text-primary-foreground/70 hover:text-primary-foreground/70 transition-colors"
               >
                 {label}
               </Link>
@@ -64,16 +64,16 @@ export const Footer = () => (
         </h4>
         <ul className="space-y-3 text-sm text-primary-foreground/80">
           <li className="flex gap-3">
-            <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
+            <MapPin size={16} className="mt-0.5 shrink-0 text-primary-foreground/70" />
             <span>{company.address}</span>
           </li>
           <li className="flex gap-3">
-            <Phone size={16} className="mt-0.5 shrink-0 text-accent" />
+            <Phone size={16} className="mt-0.5 shrink-0 text-primary-foreground/70" />
             <span>{company.phones.join(" · ")}</span>
           </li>
           <li className="flex gap-3">
-            <Mail size={16} className="mt-0.5 shrink-0 text-accent" />
-            <a href={`mailto:${company.email}`} className="hover:text-accent">
+            <Mail size={16} className="mt-0.5 shrink-0 text-primary-foreground/70" />
+            <a href={`mailto:${company.email}`} className="hover:text-primary-foreground/70">
               {company.email}
             </a>
           </li>
@@ -86,10 +86,10 @@ export const Footer = () => (
       <div className="container-wide py-6 flex flex-col md:flex-row gap-4 items-center justify-between text-xs text-primary-foreground/50">
         <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-accent">Privacy</a>
-          <a href="#" className="hover:text-accent">Terms</a>
-          <a href="#" className="hover:text-accent">Shipping</a>
-          <a href="#" className="hover:text-accent">Refund</a>
+          <a href="#" className="hover:text-primary-foreground/70">Privacy</a>
+          <a href="#" className="hover:text-primary-foreground/70">Terms</a>
+          <a href="#" className="hover:text-primary-foreground/70">Shipping</a>
+          <a href="#" className="hover:text-primary-foreground/70">Refund</a>
         </div>
       </div>
     </div>
