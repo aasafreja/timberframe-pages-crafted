@@ -44,8 +44,8 @@ export const Header = () => {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
-                  isActive ? "text-accent" : "text-foreground/80 hover:text-foreground"
+                `text-[13px] font-normal tracking-wide transition-colors ${
+                  isActive ? "text-foreground" : "text-foreground/60 hover:text-foreground"
                 }`
               }
             >
@@ -55,9 +55,9 @@ export const Header = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button asChild variant="default" size="sm" className="rounded-none">
-            <Link to="/contact">Request a quote</Link>
-          </Button>
+          <Link to="/contact" className="text-sm font-medium border-b border-foreground/40 pb-0.5 hover:border-foreground transition-colors">
+            Request a quote
+          </Link>
         </div>
 
         <button
