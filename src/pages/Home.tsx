@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-end overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20">
+      <section className="relative min-h-[88vh] flex items-end overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20">
         <img
           src={heroImg}
           alt="Thermowood facade at golden hour"
@@ -16,31 +16,25 @@ const Home = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-foreground/10" />
-        <div className="container-wide relative z-10 pb-16 md:pb-24 text-background">
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
+        <div className="container-wide relative z-10 pb-20 md:pb-28 text-background">
           <div className="max-w-3xl animate-fade-up">
-            <div className="eyebrow text-background/80 mb-6">Decorative micro CLT panels</div>
-            <h1 className="text-5xl md:text-7xl text-background leading-[0.98]">
+            <div className="eyebrow text-background/70 mb-6">Timber Smart Solution</div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-background leading-[1.02] font-normal">
               Reconnecting nature<br />with architecture.
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-background/85 max-w-xl leading-relaxed">
+            <p className="mt-8 text-base md:text-lg text-background/80 max-w-xl leading-relaxed font-light">
               Cross-Laminated Timber and Thermowood — engineered in the Baltics
               for long-lasting, chemical-free building.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="rounded-none bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link to="/products">
-                  Explore products <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-none bg-transparent border-background/40 text-background hover:bg-background hover:text-foreground"
-              >
-                <Link to="/portfolio">View portfolio</Link>
-              </Button>
+            <div className="mt-12 flex flex-wrap gap-8 items-center">
+              <Link to="/products" className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1 hover:border-background transition-colors">
+                Explore products
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link to="/portfolio" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
+                View portfolio
+              </Link>
             </div>
           </div>
         </div>
@@ -73,10 +67,10 @@ const Home = () => {
                 text: "Custom geometry, finishes and CAD-ready specs for ambitious projects.",
               },
             ].map(({ Icon, title, text }) => (
-              <div key={title} className="space-y-4">
-                <Icon className="text-accent" size={28} />
-                <h3 className="text-xl">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
+              <div key={title} className="space-y-4 border-t border-border pt-6">
+                <Icon className="text-foreground/70" size={22} strokeWidth={1.4} />
+                <h3 className="text-xl font-normal">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
               </div>
             ))}
           </div>
@@ -84,26 +78,26 @@ const Home = () => {
       </section>
 
       {/* PRODUCTS */}
-      <section className="bg-secondary/40 py-20 md:py-28 border-y border-border">
+      <section className="bg-secondary/50 py-20 md:py-28 border-y border-border">
         <div className="container-wide">
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
               <div className="eyebrow mb-4">Our products</div>
-              <h2 className="text-3xl md:text-5xl max-w-xl">
+              <h2 className="text-3xl md:text-5xl max-w-xl font-normal">
                 Four ways to bring real wood into your project.
               </h2>
             </div>
-            <Link to="/products" className="link-underline text-sm font-medium">
-              View all products <ArrowRight size={16} />
+            <Link to="/products" className="link-underline text-sm">
+              View all products <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => (
               <Link
                 key={p.slug}
                 to={`/products/${p.slug}`}
-                className="group bg-card border border-border hover:shadow-card transition-all"
+                className="group block"
               >
                 <div className="aspect-[4/5] overflow-hidden bg-muted">
                   <img
@@ -113,13 +107,10 @@ const Home = () => {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-5 space-y-2">
-                  <h3 className="text-lg">{p.name}</h3>
-                  <p className="text-xs text-muted-foreground">{p.tagline}</p>
-                  <div className="pt-2 flex items-center justify-between text-sm">
-                    <span className="text-accent font-medium">{p.price}</span>
-                    <ArrowRight size={14} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                  </div>
+                <div className="pt-4 space-y-1">
+                  <h3 className="text-base font-normal">{p.name}</h3>
+                  <p className="text-xs text-muted-foreground font-light">{p.tagline}</p>
+                  <div className="pt-2 text-xs text-foreground/60">{p.price}</div>
                 </div>
               </Link>
             ))}
@@ -132,9 +123,9 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 text-center md:text-left">
             {stats.map((s) => (
-              <div key={s.label} className="space-y-2 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
-                <div className="font-display text-5xl md:text-6xl text-accent">{s.value}</div>
-                <div className="text-sm text-muted-foreground">{s.label}</div>
+              <div key={s.label} className="space-y-3 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
+                <div className="font-display text-5xl md:text-6xl text-foreground font-normal">{s.value}</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">{s.label}</div>
               </div>
             ))}
           </div>
@@ -144,28 +135,24 @@ const Home = () => {
       {/* PORTFOLIO TEASER */}
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
         <div className="container-wide">
-          <div className="grid gap-12 lg:grid-cols-12 items-end mb-12">
+          <div className="grid gap-12 lg:grid-cols-12 items-end mb-14">
             <div className="lg:col-span-7">
-              <div className="eyebrow text-primary-foreground/60 mb-4">Selected work</div>
-              <h2 className="text-4xl md:text-5xl text-primary-foreground">
+              <div className="eyebrow text-primary-foreground/50 mb-4">Selected work</div>
+              <h2 className="text-4xl md:text-5xl text-primary-foreground font-normal">
                 Buildings that breathe wood.
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="text-primary-foreground/70 leading-relaxed">
+              <p className="text-primary-foreground/60 leading-relaxed font-light">
                 Architects across Europe choose us for façades, interiors and
                 bespoke timber elements. Here's a glimpse of what's possible.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {projects.slice(0, 3).map((proj) => (
-              <Link
-                key={proj.id}
-                to={`/portfolio/${proj.id}`}
-                className="group block"
-              >
+              <Link key={proj.id} to={`/portfolio/${proj.id}`} className="group block">
                 <div className="aspect-[4/5] overflow-hidden bg-muted/20">
                   <img
                     src={proj.cover}
@@ -176,10 +163,10 @@ const Home = () => {
                 </div>
                 <div className="pt-4 flex items-start justify-between">
                   <div>
-                    <h3 className="text-primary-foreground text-xl">{proj.title}</h3>
-                    <p className="text-sm text-primary-foreground/60">{proj.location}</p>
+                    <h3 className="text-primary-foreground text-lg font-normal">{proj.title}</h3>
+                    <p className="text-sm text-primary-foreground/50 font-light">{proj.location}</p>
                   </div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-accent">{proj.category}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50 pt-2">{proj.category}</span>
                 </div>
               </Link>
             ))}
@@ -190,29 +177,27 @@ const Home = () => {
       {/* CTA */}
       <section className="py-20 md:py-28">
         <div className="container-wide">
-          <div className="bg-gradient-warm border border-border p-10 md:p-16 grid gap-10 lg:grid-cols-12 items-center">
-            <div className="lg:col-span-7 space-y-5">
-              <h2 className="text-3xl md:text-5xl leading-[1.05]">
+          <div className="border-t border-border pt-16 md:pt-20 grid gap-10 lg:grid-cols-12 items-end">
+            <div className="lg:col-span-7 space-y-6">
+              <h2 className="text-3xl md:text-5xl leading-[1.05] font-normal max-w-xl">
                 Have a project on the table?
               </h2>
-              <p className="text-muted-foreground max-w-lg">
+              <p className="text-muted-foreground max-w-lg font-light">
                 Send us your drawings or a brief description — we'll come back
                 with material recommendations, lead times and a quote.
               </p>
               <ul className="space-y-2 pt-2">
                 {["No-pressure consultation", "Reply within 1 business day", "EU-wide delivery"].map((t) => (
-                  <li key={t} className="flex items-center gap-2 text-sm">
-                    <Check size={16} className="text-accent" /> {t}
+                  <li key={t} className="flex items-center gap-3 text-sm text-foreground/80 font-light">
+                    <Check size={14} strokeWidth={1.5} className="text-foreground/60" /> {t}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="lg:col-span-5 lg:text-right">
-              <Button asChild size="lg" className="rounded-none bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link to="/contact">
-                  Request a quote <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
+              <Link to="/contact" className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors">
+                Request a quote <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </div>

@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
 
 export const Logo = ({ className = "" }: { className?: string }) => (
-  <Link to="/" className={`inline-flex items-center gap-2 group ${className}`}>
-    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <Link to="/" className={`inline-flex items-center gap-2.5 group ${className}`}>
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
       <path
-        d="M16 3 L29 11 V25 L16 29 L3 25 V11 Z"
+        d="M16 4 L28 11 V22 L16 28 L4 22 V11 Z"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.2"
         fill="none"
       />
-      <path d="M9 14 L16 18 L23 14 M16 18 V26" stroke="currentColor" strokeWidth="1.4" />
     </svg>
-    <span className="font-display text-lg leading-none tracking-tight">
-      Timber<span className="text-accent">.</span>Smart
+    <span className="font-display text-base leading-none tracking-tight">
+      Timber Smart
     </span>
   </Link>
 );
