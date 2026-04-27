@@ -77,7 +77,7 @@ export const Footer = () => (
         </div>
 
         {/* Right: socials */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 md:col-start-11">
           <h4 className="text-[11px] uppercase tracking-[0.22em] text-primary-foreground/40 mb-6">
             Follow
           </h4>
