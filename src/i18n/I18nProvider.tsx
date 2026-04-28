@@ -33,7 +33,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
       let str = dict[key] ?? translations.en[key] ?? key;
       if (vars) {
         for (const [k, v] of Object.entries(vars)) {
-          str = str.replaceAll(`{${k}}`, String(v));
+          str = str.split(`{${k}}`).join(String(v));
         }
       }
       return str;
