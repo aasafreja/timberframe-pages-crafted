@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Leaf, ShieldCheck, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
+import { useI18n } from "@/i18n/I18nProvider";
 
 const Home = () => {
+  const { t } = useI18n();
+  const advantages = [
+    { Icon: Leaf, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
+    { Icon: ShieldCheck, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
+    { Icon: Sparkles, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
+  ];
+
   return (
     <>
       {/* HERO */}
@@ -19,21 +26,20 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
         <div className="container-wide relative z-10 pb-20 md:pb-28 text-background">
           <div className="max-w-3xl animate-fade-up">
-            <div className="eyebrow text-background/70 mb-6">Timber Smart Solution</div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl text-background leading-[1.02] font-normal">
-              Reconnecting nature<br />with architecture.
+            <div className="eyebrow text-background/70 mb-6">{t("home.hero.eyebrow")}</div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-background leading-[1.02] font-normal whitespace-pre-line">
+              {t("home.hero.title")}
             </h1>
             <p className="mt-8 text-base md:text-lg text-background/80 max-w-xl leading-relaxed font-light">
-              Cross-Laminated Timber and Thermowood — engineered in the Baltics
-              for long-lasting, chemical-free building.
+              {t("home.hero.sub")}
             </p>
             <div className="mt-12 flex flex-wrap gap-8 items-center">
               <Link to="/products" className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1 hover:border-background transition-colors">
-                Explore products
+                {t("common.exploreProducts")}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link to="/portfolio" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
-                View portfolio
+                {t("common.viewPortfolio")}
               </Link>
             </div>
           </div>
@@ -44,29 +50,11 @@ const Home = () => {
       <section className="py-20 md:py-28">
         <div className="container-wide grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <div className="eyebrow mb-4">Why timber smart</div>
-            <h2 className="text-3xl md:text-4xl">
-              Wood that performs as beautifully as it ages.
-            </h2>
+            <div className="eyebrow mb-4">{t("home.adv.eyebrow")}</div>
+            <h2 className="text-3xl md:text-4xl">{t("home.adv.title")}</h2>
           </div>
           <div className="lg:col-span-8 grid gap-10 sm:grid-cols-3">
-            {[
-              {
-                Icon: Leaf,
-                title: "Chemical-free",
-                text: "Treated with heat and steam only — safe for people, generous to the environment.",
-              },
-              {
-                Icon: ShieldCheck,
-                title: "Built to last",
-                text: "Dimensional stability, decay & insect resistance, 30+ years of service life.",
-              },
-              {
-                Icon: Sparkles,
-                title: "Architect-grade",
-                text: "Custom geometry, finishes and CAD-ready specs for ambitious projects.",
-              },
-            ].map(({ Icon, title, text }) => (
+            {advantages.map(({ Icon, title, text }) => (
               <div key={title} className="space-y-4 border-t border-border pt-6">
                 <Icon className="text-foreground/70" size={22} strokeWidth={1.4} />
                 <h3 className="text-xl font-normal">{title}</h3>
@@ -82,13 +70,13 @@ const Home = () => {
         <div className="container-wide">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
-              <div className="eyebrow mb-4">Our products</div>
+              <div className="eyebrow mb-4">{t("home.products.eyebrow")}</div>
               <h2 className="text-3xl md:text-5xl max-w-xl font-normal">
-                Four ways to bring real wood into your project.
+                {t("home.products.title")}
               </h2>
             </div>
             <Link to="/products" className="link-underline text-sm">
-              View all products <ArrowRight size={14} />
+              {t("common.viewAll")} <ArrowRight size={14} />
             </Link>
           </div>
 
@@ -122,10 +110,10 @@ const Home = () => {
       <section className="py-20 md:py-28">
         <div className="container-wide">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 text-center md:text-left">
-            {stats.map((s) => (
-              <div key={s.label} className="space-y-3 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
+            {stats.map((s, i) => (
+              <div key={i} className="space-y-3 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
                 <div className="font-display text-5xl md:text-6xl text-foreground font-normal">{s.value}</div>
-                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">{s.label}</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">{t(`stats.${i}`)}</div>
               </div>
             ))}
           </div>
@@ -137,15 +125,14 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid gap-12 lg:grid-cols-12 items-end mb-14">
             <div className="lg:col-span-7">
-              <div className="eyebrow text-primary-foreground/50 mb-4">Selected work</div>
+              <div className="eyebrow text-primary-foreground/50 mb-4">{t("home.portfolio.eyebrow")}</div>
               <h2 className="text-4xl md:text-5xl text-primary-foreground font-normal">
-                Buildings that breathe wood.
+                {t("home.portfolio.title")}
               </h2>
             </div>
             <div className="lg:col-span-5">
               <p className="text-primary-foreground/60 leading-relaxed font-light">
-                Architects across Europe choose us for façades, interiors and
-                bespoke timber elements. Here's a glimpse of what's possible.
+                {t("home.portfolio.text")}
               </p>
             </div>
           </div>
@@ -166,7 +153,9 @@ const Home = () => {
                     <h3 className="text-primary-foreground text-lg font-normal">{proj.title}</h3>
                     <p className="text-sm text-primary-foreground/50 font-light">{proj.location}</p>
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50 pt-2">{proj.category}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-primary-foreground/50 pt-2">
+                    {t(`portfolio.filter.${proj.category}`)}
+                  </span>
                 </div>
               </Link>
             ))}
@@ -180,23 +169,22 @@ const Home = () => {
           <div className="border-t border-border pt-16 md:pt-20 grid gap-10 lg:grid-cols-12 items-end">
             <div className="lg:col-span-7 space-y-6">
               <h2 className="text-3xl md:text-5xl leading-[1.05] font-normal max-w-xl">
-                Have a project on the table?
+                {t("home.cta.title")}
               </h2>
               <p className="text-muted-foreground max-w-lg font-light">
-                Send us your drawings or a brief description — we'll come back
-                with material recommendations, lead times and a quote.
+                {t("home.cta.text")}
               </p>
               <ul className="space-y-2 pt-2">
-                {["No-pressure consultation", "Reply within 1 business day", "EU-wide delivery"].map((t) => (
-                  <li key={t} className="flex items-center gap-3 text-sm text-foreground/80 font-light">
-                    <Check size={14} strokeWidth={1.5} className="text-foreground/60" /> {t}
+                {[t("home.cta.b1"), t("home.cta.b2"), t("home.cta.b3")].map((txt) => (
+                  <li key={txt} className="flex items-center gap-3 text-sm text-foreground/80 font-light">
+                    <Check size={14} strokeWidth={1.5} className="text-foreground/60" /> {txt}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="lg:col-span-5 lg:text-right">
               <Link to="/contact" className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors">
-                Request a quote <ArrowRight size={16} />
+                {t("nav.quote")} <ArrowRight size={16} />
               </Link>
             </div>
           </div>

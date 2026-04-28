@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { projects } from "@/data/site";
+import { useI18n } from "@/i18n/I18nProvider";
 
 const FILTERS = ["All", "Residential", "Commercial", "Interior"] as const;
 
 const Portfolio = () => {
+  const { t } = useI18n();
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
   const list = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <>
       <PageHeader
-        eyebrow="Portfolio"
-        title="Selected projects"
-        description="A small selection of buildings and interiors built with our timber. Filter by category to explore."
+        eyebrow={t("portfolio.eyebrow")}
+        title={t("portfolio.title")}
+        description={t("portfolio.desc")}
       />
 
       <section className="py-12 md:py-16">
@@ -31,18 +32,14 @@ const Portfolio = () => {
                     : "text-foreground/50 border-transparent hover:text-foreground"
                 }`}
               >
-                {f}
+                {t(`portfolio.filter.${f}`)}
               </button>
             ))}
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {list.map((p) => (
-              <Link
-                key={p.id}
-                to={`/portfolio/${p.id}`}
-                className="group block animate-fade-up"
-              >
+              <Link key={p.id} to={`/portfolio/${p.id}`} className="group block animate-fade-up">
                 <div className="aspect-[4/5] overflow-hidden bg-muted">
                   <img
                     src={p.cover}
@@ -62,7 +59,7 @@ const Portfolio = () => {
                     </p>
                   </div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap pt-1">
-                    {p.category}
+                    {t(`portfolio.filter.${p.category}`)}
                   </span>
                 </div>
               </Link>

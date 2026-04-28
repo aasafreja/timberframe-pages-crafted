@@ -6,61 +6,32 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { PageHeader } from "@/components/PageHeader";
-
-const STEPS = [
-  {
-    n: "01",
-    title: "Consultation",
-    text: "Share your drawings, schedule or just an idea. We review feasibility, suggest products and outline lead times — usually within one business day.",
-    duration: "1 – 3 days",
-  },
-  {
-    n: "02",
-    title: "Design & specification",
-    text: "Our technical team prepares CAD-ready specs, finish samples and a detailed quote. We collaborate directly with your architect or contractor.",
-    duration: "1 – 2 weeks",
-  },
-  {
-    n: "03",
-    title: "Production",
-    text: "Manufacturing in our Baltic facilities — heat treatment, lamination, CNC and finishing. Quality controlled at every stage.",
-    duration: "3 – 6 weeks",
-  },
-  {
-    n: "04",
-    title: "Delivery & install",
-    text: "Carefully packed, transported across the EU (worldwide on request) and supported with installation guides. On-site assistance available.",
-    duration: "1 – 2 weeks",
-  },
-];
-
-const FAQ = [
-  {
-    q: "Do you ship outside the EU?",
-    a: "Yes — we regularly deliver across the EU and UK, and quote worldwide shipments on request.",
-  },
-  {
-    q: "Can you work directly with my architect?",
-    a: "Absolutely. We exchange DWG / IFC / Revit files and join project calls when needed.",
-  },
-  {
-    q: "What's the minimum order?",
-    a: "There's no strict minimum — we ship from a single sample panel up to full façade systems.",
-  },
-  {
-    q: "Are samples available?",
-    a: "Yes, we send free A5-format samples of our standard finishes. Custom samples on request.",
-  },
-];
+import { useI18n } from "@/i18n/I18nProvider";
 
 const Process = () => {
+  const { t } = useI18n();
   const [active, setActive] = useState(0);
+
+  const STEPS = [
+    { n: "01", title: t("process.s1.title"), text: t("process.s1.text"), duration: t("process.s1.dur") },
+    { n: "02", title: t("process.s2.title"), text: t("process.s2.text"), duration: t("process.s2.dur") },
+    { n: "03", title: t("process.s3.title"), text: t("process.s3.text"), duration: t("process.s3.dur") },
+    { n: "04", title: t("process.s4.title"), text: t("process.s4.text"), duration: t("process.s4.dur") },
+  ];
+
+  const FAQ = [
+    { q: t("process.faq.q1"), a: t("process.faq.a1") },
+    { q: t("process.faq.q2"), a: t("process.faq.a2") },
+    { q: t("process.faq.q3"), a: t("process.faq.a3") },
+    { q: t("process.faq.q4"), a: t("process.faq.a4") },
+  ];
+
   return (
     <>
       <PageHeader
-        eyebrow="How it works"
-        title="From first sketch to installed timber."
-        description="A transparent, four-step process designed around how architects and developers actually work."
+        eyebrow={t("process.eyebrow")}
+        title={t("process.title")}
+        description={t("process.desc")}
       />
 
       <section className="py-20 md:py-28">
@@ -92,7 +63,7 @@ const Process = () => {
 
           <div className="lg:col-span-7 lg:sticky lg:top-32 lg:self-start">
             <div className="bg-secondary/50 border border-border p-10 md:p-14 min-h-[320px]">
-              <div className="eyebrow mb-3">Step {STEPS[active].n}</div>
+              <div className="eyebrow mb-3">{t("process.step")} {STEPS[active].n}</div>
               <h2 className="text-3xl md:text-4xl mb-6">{STEPS[active].title}</h2>
               <p className="text-muted-foreground leading-relaxed text-lg">{STEPS[active].text}</p>
             </div>
@@ -100,11 +71,10 @@ const Process = () => {
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="bg-secondary/40 border-y border-border py-20">
         <div className="container-wide">
-          <div className="eyebrow mb-4">Typical timeline</div>
-          <h2 className="text-3xl md:text-4xl mb-10">Most projects ship in 6 – 10 weeks.</h2>
+          <div className="eyebrow mb-4">{t("process.timeline.eyebrow")}</div>
+          <h2 className="text-3xl md:text-4xl mb-10">{t("process.timeline.title")}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
             {STEPS.map((s) => (
               <div key={s.n} className="bg-background p-6">
@@ -117,12 +87,11 @@ const Process = () => {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-20 md:py-28">
         <div className="container-wide grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <div className="eyebrow mb-4">FAQ</div>
-            <h2 className="text-3xl md:text-4xl">Process questions, answered.</h2>
+            <div className="eyebrow mb-4">{t("process.faq.eyebrow")}</div>
+            <h2 className="text-3xl md:text-4xl">{t("process.faq.title")}</h2>
           </div>
           <div className="lg:col-span-8">
             <Accordion type="single" collapsible className="w-full">

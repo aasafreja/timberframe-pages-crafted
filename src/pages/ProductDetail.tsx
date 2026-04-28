@@ -3,8 +3,10 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/site";
+import { useI18n } from "@/i18n/I18nProvider";
 
 const ProductDetail = () => {
+  const { t } = useI18n();
   const { slug } = useParams();
   const product = products.find((p) => p.slug === slug);
   const [active, setActive] = useState(0);
@@ -18,11 +20,10 @@ const ProductDetail = () => {
           to="/products"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-10"
         >
-          <ArrowLeft size={14} /> All products
+          <ArrowLeft size={14} /> {t("common.back.products")}
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-2">
-          {/* Gallery */}
           <div className="space-y-4">
             <div className="aspect-[4/5] bg-muted overflow-hidden">
               <img
@@ -46,17 +47,15 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          {/* Details */}
           <div className="lg:py-6">
             <div className="eyebrow mb-4">{product.tagline}</div>
             <h1 className="text-4xl md:text-5xl">{product.name}</h1>
             <div className="mt-6 text-2xl font-display text-accent">{product.price}</div>
             <p className="mt-6 text-muted-foreground leading-relaxed">{product.description}</p>
 
-            {/* Specs */}
             <div className="mt-10">
               <h2 className="text-sm uppercase tracking-[0.2em] font-sans text-muted-foreground mb-4">
-                Specifications
+                {t("common.specifications")}
               </h2>
               <dl className="border-t border-border">
                 {product.specs.map((s) => (
@@ -68,21 +67,20 @@ const ProductDetail = () => {
               </dl>
             </div>
 
-            {/* CTA */}
             <div className="mt-10 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-none bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link to={`/contact?product=${encodeURIComponent(product.name)}`}>
-                  Request a quote <ArrowRight className="ml-2" size={18} />
+                  {t("nav.quote")} <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-none">
                 <a href="mailto:timbersmartsolution@gmail.com">
-                  <Mail className="mr-2" size={16} /> Email us
+                  <Mail className="mr-2" size={16} /> {t("common.emailUs")}
                 </a>
               </Button>
             </div>
             <p className="mt-4 text-xs text-muted-foreground">
-              All orders are quoted individually based on volume, finish and delivery terms.
+              {t("product.quotedNote")}
             </p>
           </div>
         </div>
