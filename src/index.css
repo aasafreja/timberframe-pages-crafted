@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap&subset=latin-ext');
 
 @tailwind base;
 @tailwind components;
@@ -82,13 +82,13 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: 'ss01', 'cv11';
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   h1, h2, h3, h4, h5 {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
     font-weight: 400;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    font-variant-ligatures: none;
     @apply text-foreground;
   }
   h1 { font-weight: 400; }
