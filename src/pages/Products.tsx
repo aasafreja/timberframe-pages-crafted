@@ -12,7 +12,7 @@ const Products = () => {
   return (
     <>
       {/* HERO — full-bleed, cinematic */}
-      <section className="relative min-h-[92vh] flex items-end overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 border-b border-border">
+      <section className="relative md:min-h-[78vh] flex flex-col justify-end overflow-hidden -mt-16 md:-mt-20 pt-24 md:pt-20 border-b border-border">
         <img
           src={heroImg}
           alt="Premium CLT and thermowood panels stacked in workshop"
@@ -27,13 +27,13 @@ const Products = () => {
           aria-hidden
         />
 
-        <div className="container-wide relative z-10 pb-16 md:pb-24 text-background">
+        <div className="container-wide relative z-10 pt-16 pb-14 md:pb-32 text-background">
           <div className="max-w-3xl animate-fade-up">
             <div className="eyebrow text-background/70 mb-6">
               Catalogue · Timber Smart Solutions
             </div>
 
-            <h1 className="text-background leading-[1.02] tracking-[-0.04em] font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="text-background leading-[1.02] tracking-[-0.04em] font-light text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               Premium CLT
               <br />
               &amp; Thermowood
@@ -44,7 +44,7 @@ const Products = () => {
               cross-laminated panels, thermowood cladding and acoustic systems — built to spec.
             </p>
 
-            <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-6">
+            <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-6">
               <Link
                 to="/contact"
                 className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/60 pb-1.5 hover:border-background transition-colors"
@@ -65,13 +65,13 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Meta strip */}
-        <div className="absolute bottom-0 inset-x-0 z-10 border-t border-background/15 bg-background/[0.04] backdrop-blur-[2px]">
+        {/* Meta strip — in-flow on mobile, absolute on desktop */}
+        <div className="relative md:absolute md:bottom-0 md:inset-x-0 z-10 border-t border-background/15 bg-background/[0.04] backdrop-blur-[2px]">
           <div className="container-wide grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-background/15 text-background/85">
             {meta.map((m) => (
               <div
                 key={m}
-                className="py-4 sm:py-5 text-[11px] md:text-xs uppercase tracking-[0.22em] font-light text-center sm:first:text-left sm:last:text-right"
+                className="py-4 sm:py-5 text-[11px] md:text-xs uppercase tracking-[0.22em] font-light text-center"
               >
                 {m}
               </div>
