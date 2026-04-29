@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Leaf, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake } from "lucide-react";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -7,9 +7,11 @@ import { useI18n } from "@/i18n/I18nProvider";
 const Home = () => {
   const { t } = useI18n();
   const advantages = [
-    { Icon: Leaf, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
-    { Icon: ShieldCheck, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
-    { Icon: Sparkles, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
+    { Icon: Award, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
+    { Icon: Settings2, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
+    { Icon: Clock, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
+    { Icon: Tag, title: t("home.adv.4.title"), text: t("home.adv.4.text") },
+    { Icon: Handshake, title: t("home.adv.5.title"), text: t("home.adv.5.text") },
   ];
 
   return (
@@ -38,8 +40,8 @@ const Home = () => {
                 {t("common.exploreProducts")}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link to="/portfolio" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
-                {t("common.viewPortfolio")}
+              <Link to="/contact" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
+                {t("nav.quote")}
               </Link>
             </div>
           </div>
@@ -53,12 +55,21 @@ const Home = () => {
             <div className="eyebrow mb-4">{t("home.adv.eyebrow")}</div>
             <h2 className="text-3xl md:text-4xl">{t("home.adv.title")}</h2>
           </div>
-          <div className="lg:col-span-8 grid gap-10 sm:grid-cols-3">
+          <div className="lg:col-span-8 grid gap-8 sm:grid-cols-2">
             {advantages.map(({ Icon, title, text }) => (
-              <div key={title} className="space-y-4 border-t border-border pt-6">
-                <Icon className="text-foreground/70" size={22} strokeWidth={1.4} />
-                <h3 className="text-xl font-normal">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
+              <div
+                key={title}
+                className="group relative flex gap-5 border-t border-border pt-6 transition-colors hover:border-foreground/40"
+              >
+                <div className="shrink-0">
+                  <div className="flex h-11 w-11 items-center justify-center bg-secondary/60 group-hover:bg-accent/15 transition-colors">
+                    <Icon className="text-foreground/80 group-hover:text-accent transition-colors" size={20} strokeWidth={1.4} />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-base md:text-lg font-normal leading-snug">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -80,7 +91,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
               <Link
                 key={p.slug}

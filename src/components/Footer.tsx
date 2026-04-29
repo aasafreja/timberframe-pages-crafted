@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { company } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -15,16 +16,16 @@ export const Footer = () => {
   ];
 
   const LEGAL_LINKS: [string, string][] = [
-    [t("footer.legal.privacy"), "#"],
+    [t("footer.legal.privacy"), "/privacy"],
     [t("footer.legal.terms"), "#"],
     [t("footer.legal.shipping"), "#"],
     [t("footer.legal.refund"), "#"],
   ];
 
-  const SOCIALS: [string, string][] = [
-    ["Instagram", "#"],
-    ["LinkedIn", "#"],
-    ["Facebook", "#"],
+  const SOCIALS: { label: string; href: string; Icon: typeof Instagram }[] = [
+    { label: "Instagram", href: "#", Icon: Instagram },
+    { label: "LinkedIn", href: "#", Icon: Linkedin },
+    { label: "Facebook", href: "#", Icon: Facebook },
   ];
 
   return (
@@ -82,18 +83,32 @@ export const Footer = () => {
             <h4 className="text-[11px] uppercase tracking-[0.22em] text-primary-foreground/40 mb-6">
               {t("footer.follow")}
             </h4>
-            <ul className="space-y-3 text-sm font-light">
-              {SOCIALS.map(([label, href]) => (
+            <ul className="space-y-3 text-sm font-light mb-6">
+              {SOCIALS.map(({ label, href, Icon }) => (
                 <li key={label}>
                   <a
                     href={href}
-                    className="text-primary-foreground/75 hover:text-primary-foreground transition-colors"
+                    aria-label={label}
+                    className="inline-flex items-center gap-3 text-primary-foreground/75 hover:text-primary-foreground transition-colors"
                   >
+                    <Icon size={16} strokeWidth={1.5} />
                     {label}
                   </a>
                 </li>
               ))}
             </ul>
+            <div className="flex items-center gap-3">
+              {SOCIALS.map(({ label, href, Icon }) => (
+                <a
+                  key={`icon-${label}`}
+                  href={href}
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center border border-primary-foreground/20 text-primary-foreground/75 hover:text-primary-foreground hover:border-primary-foreground/60 transition-colors"
+                >
+                  <Icon size={15} strokeWidth={1.5} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -102,15 +117,25 @@ export const Footer = () => {
             {t("footer.copyright", { year: new Date().getFullYear(), name: company.name })}
           </span>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {LEGAL_LINKS.map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className="hover:text-primary-foreground transition-colors"
-              >
-                {label}
-              </a>
-            ))}
+            {LEGAL_LINKS.map(([label, href]) =>
+              href.startsWith("/") ? (
+                <Link
+                  key={label}
+                  to={href}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  {label}
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>

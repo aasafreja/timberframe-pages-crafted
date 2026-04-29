@@ -46,19 +46,25 @@ export const translations: Record<Lang, Dict> = {
     "home.hero.title": "Reconnecting nature\nwith architecture.",
     "home.hero.sub":
       "Cross-Laminated Timber and Thermowood — engineered in the Baltics for long-lasting, chemical-free building.",
-    "home.adv.eyebrow": "Why timber smart",
-    "home.adv.title": "Wood that performs as beautifully as it ages.",
-    "home.adv.1.title": "Chemical-free",
+    "home.adv.eyebrow": "Why Timber Smart",
+    "home.adv.title": "Built right. Delivered fast. Priced for business.",
+    "home.adv.1.title": "ISO & FSC certified production",
     "home.adv.1.text":
-      "Treated with heat and steam only — safe for people, generous to the environment.",
-    "home.adv.2.title": "Built to last",
+      "Independently audited quality and chain-of-custody from sustainably managed forests.",
+    "home.adv.2.title": "Custom designs & specifications",
     "home.adv.2.text":
-      "Dimensional stability, decay & insect resistance, 30+ years of service life.",
-    "home.adv.3.title": "Architect-grade",
+      "Bespoke geometry, profiles and finishes engineered to your project drawings.",
+    "home.adv.3.title": "Fast turnaround time (2–4 weeks)",
     "home.adv.3.text":
-      "Custom geometry, finishes and CAD-ready specs for ambitious projects.",
+      "Predictable lead times for standard items — most orders ship within four weeks.",
+    "home.adv.4.title": "Competitive pricing for bulk orders",
+    "home.adv.4.text":
+      "Volume-based pricing tiers for developers, contractors and resellers.",
+    "home.adv.5.title": "Direct B2B partnership model",
+    "home.adv.5.text":
+      "Work directly with our team — no middlemen, transparent terms, long-term partnership.",
     "home.products.eyebrow": "Our products",
-    "home.products.title": "Four ways to bring real wood into your project.",
+    "home.products.title": "Three ways to bring real wood into your project.",
     "home.portfolio.eyebrow": "Selected work",
     "home.portfolio.title": "Buildings that breathe wood.",
     "home.portfolio.text":
@@ -217,6 +223,34 @@ export const translations: Record<Lang, Dict> = {
     "contact.interested": "I'm interested in: {product}\n\n",
     "product.quotedNote":
       "All orders are quoted individually based on volume, finish and delivery terms.",
+
+    // Privacy
+    "privacy.eyebrow": "Legal",
+    "privacy.title": "Privacy Policy",
+    "privacy.desc":
+      "How we collect, use and protect information when you interact with Timber Smart Solution.",
+    "privacy.updated": "Last updated: April 2026",
+    "privacy.s1.title": "1. Information we collect",
+    "privacy.s1.text":
+      "We collect information you provide directly — such as your name, company, email address, phone number and any project details you share through our contact forms or email.",
+    "privacy.s2.title": "2. How we use information",
+    "privacy.s2.text":
+      "We use your information to respond to inquiries, prepare quotes, deliver products and services, and keep you updated about your project. We do not sell or rent personal data to third parties.",
+    "privacy.s3.title": "3. Sharing of information",
+    "privacy.s3.text":
+      "We may share data with trusted partners (logistics, certified production partners, payment processors) strictly to fulfil your order. All partners are bound by confidentiality and data-protection obligations.",
+    "privacy.s4.title": "4. Data retention",
+    "privacy.s4.text":
+      "We keep project and contact records for as long as needed to provide our services and to comply with legal, tax and accounting obligations under EU and Latvian law.",
+    "privacy.s5.title": "5. Your rights",
+    "privacy.s5.text":
+      "Under the GDPR you may request access to, correction of, or deletion of your personal data, and object to certain processing. To exercise these rights, contact us at the email below.",
+    "privacy.s6.title": "6. Cookies",
+    "privacy.s6.text":
+      "Our website uses essential cookies to function correctly and may use analytics cookies to help us improve. You can disable non-essential cookies in your browser settings.",
+    "privacy.s7.title": "7. Contact",
+    "privacy.s7.text":
+      "Questions about this policy or your data? Reach us at:",
   },
   lv: {
     "nav.products": "Produkti",
@@ -253,18 +287,24 @@ export const translations: Record<Lang, Dict> = {
     "home.hero.sub":
       "Krustām līmēta koksne (CLT) un Thermowood — projektēti Baltijā ilgmūžīgai un ķīmiski tīrai būvniecībai.",
     "home.adv.eyebrow": "Kāpēc Timber Smart",
-    "home.adv.title": "Koks, kas darbojas tikpat skaisti, cik ilgi kalpo.",
-    "home.adv.1.title": "Bez ķīmijas",
+    "home.adv.title": "Kvalitatīvi izgatavots. Ātri piegādāts. Cena, kas der biznesam.",
+    "home.adv.1.title": "ISO un FSC sertificēta ražošana",
     "home.adv.1.text":
-      "Apstrādāts tikai ar siltumu un tvaiku — droši cilvēkiem un saudzīgi videi.",
-    "home.adv.2.title": "Veidots ilgmūžībai",
+      "Neatkarīgi auditēta kvalitāte un izsekojamība no ilgtspējīgi apsaimniekotiem mežiem.",
+    "home.adv.2.title": "Pielāgots dizains un specifikācijas",
     "home.adv.2.text":
-      "Izmēru stabilitāte, izturība pret puvi un kukaiņiem, 30+ gadu kalpošanas laiks.",
-    "home.adv.3.title": "Arhitektu klase",
+      "Īpaša ģeometrija, profili un apdare, izstrādāti pēc jūsu projekta rasējumiem.",
+    "home.adv.3.title": "Ātrs izpildes laiks (2–4 nedēļas)",
     "home.adv.3.text":
-      "Pielāgota ģeometrija, apdare un CAD specifikācijas vērienīgiem projektiem.",
+      "Paredzami termiņi standarta produktiem — vairums pasūtījumu tiek nosūtīti 4 nedēļās.",
+    "home.adv.4.title": "Konkurētspējīga cena lieliem pasūtījumiem",
+    "home.adv.4.text":
+      "Apjomam pielāgotas cenas attīstītājiem, būvniekiem un vairumtirgotājiem.",
+    "home.adv.5.title": "Tieša B2B sadarbība",
+    "home.adv.5.text":
+      "Strādājiet tieši ar mūsu komandu — bez starpniekiem, caurspīdīgi nosacījumi, ilgtermiņa partnerība.",
     "home.products.eyebrow": "Mūsu produkti",
-    "home.products.title": "Četri veidi, kā ienest īstu koku jūsu projektā.",
+    "home.products.title": "Trīs veidi, kā ienest īstu koku jūsu projektā.",
     "home.portfolio.eyebrow": "Atlasītie darbi",
     "home.portfolio.title": "Ēkas, kas elpo koku.",
     "home.portfolio.text":
@@ -415,5 +455,33 @@ export const translations: Record<Lang, Dict> = {
     "contact.interested": "Mani interesē: {product}\n\n",
     "product.quotedNote":
       "Visi pasūtījumi tiek piedāvāti individuāli, atkarībā no apjoma, apdares un piegādes nosacījumiem.",
+
+    // Privacy
+    "privacy.eyebrow": "Juridiskā informācija",
+    "privacy.title": "Privātuma politika",
+    "privacy.desc":
+      "Kā mēs ievācam, izmantojam un aizsargājam informāciju, sazinoties ar Timber Smart Solution.",
+    "privacy.updated": "Pēdējoreiz atjaunināts: 2026. gada aprīlis",
+    "privacy.s1.title": "1. Informācija, ko ievācam",
+    "privacy.s1.text":
+      "Mēs ievācam informāciju, ko jūs sniedzat tieši — vārdu, uzņēmumu, e-pastu, tālruņa numuru un projekta detaļas, ko nododat ar kontaktu formām vai e-pastu.",
+    "privacy.s2.title": "2. Kā izmantojam informāciju",
+    "privacy.s2.text":
+      "Informāciju izmantojam, lai atbildētu uz jautājumiem, sagatavotu piedāvājumus, piegādātu produktus un informētu jūs par projekta gaitu. Mēs nepārdodam un neiznomājam personas datus trešajām pusēm.",
+    "privacy.s3.title": "3. Datu kopīgošana",
+    "privacy.s3.text":
+      "Datus varam dalīt ar uzticamiem partneriem (loģistika, sertificēti ražošanas partneri, maksājumu pakalpojumu sniedzēji) tikai jūsu pasūtījuma izpildei. Visi partneri ir saistīti ar konfidencialitātes un datu aizsardzības saistībām.",
+    "privacy.s4.title": "4. Datu glabāšana",
+    "privacy.s4.text":
+      "Projektu un kontaktu ierakstus glabājam tik ilgi, cik nepieciešams pakalpojumu sniegšanai un atbilstoši ES un Latvijas juridiskajām, nodokļu un grāmatvedības prasībām.",
+    "privacy.s5.title": "5. Jūsu tiesības",
+    "privacy.s5.text":
+      "Saskaņā ar GDPR jums ir tiesības piekļūt saviem personas datiem, tos labot vai dzēst, kā arī iebilst pret atsevišķu apstrādi. Lai izmantotu šīs tiesības, sazinieties ar mums e-pastā zemāk.",
+    "privacy.s6.title": "6. Sīkdatnes",
+    "privacy.s6.text":
+      "Mūsu vietne izmanto nepieciešamās sīkdatnes pareizai darbībai un var izmantot analītikas sīkdatnes uzlabojumiem. Jūs varat atspējot neobligātās sīkdatnes pārlūka iestatījumos.",
+    "privacy.s7.title": "7. Kontakti",
+    "privacy.s7.text":
+      "Jautājumi par šo politiku vai jūsu datiem? Sazinieties:",
   },
 };
