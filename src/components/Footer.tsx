@@ -117,15 +117,25 @@ export const Footer = () => {
             {t("footer.copyright", { year: new Date().getFullYear(), name: company.name })}
           </span>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {LEGAL_LINKS.map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className="hover:text-primary-foreground transition-colors"
-              >
-                {label}
-              </a>
-            ))}
+            {LEGAL_LINKS.map(([label, href]) =>
+              href.startsWith("/") ? (
+                <Link
+                  key={label}
+                  to={href}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  {label}
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>
