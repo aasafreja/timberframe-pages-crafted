@@ -1,5 +1,6 @@
 import { Download, FileText } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import specsHero from "@/assets/products/thermowood.jpeg";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -45,6 +46,7 @@ const Specs = () => {
         eyebrow={t("specs.eyebrow")}
         title={t("specs.title")}
         description={t("specs.desc")}
+        image={specsHero}
       />
 
       <section className="py-16 md:py-20">
