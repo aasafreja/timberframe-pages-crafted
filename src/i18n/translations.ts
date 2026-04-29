@@ -223,6 +223,34 @@ export const translations: Record<Lang, Dict> = {
     "contact.interested": "I'm interested in: {product}\n\n",
     "product.quotedNote":
       "All orders are quoted individually based on volume, finish and delivery terms.",
+
+    // Privacy
+    "privacy.eyebrow": "Legal",
+    "privacy.title": "Privacy Policy",
+    "privacy.desc":
+      "How we collect, use and protect information when you interact with Timber Smart Solution.",
+    "privacy.updated": "Last updated: April 2026",
+    "privacy.s1.title": "1. Information we collect",
+    "privacy.s1.text":
+      "We collect information you provide directly — such as your name, company, email address, phone number and any project details you share through our contact forms or email.",
+    "privacy.s2.title": "2. How we use information",
+    "privacy.s2.text":
+      "We use your information to respond to inquiries, prepare quotes, deliver products and services, and keep you updated about your project. We do not sell or rent personal data to third parties.",
+    "privacy.s3.title": "3. Sharing of information",
+    "privacy.s3.text":
+      "We may share data with trusted partners (logistics, certified production partners, payment processors) strictly to fulfil your order. All partners are bound by confidentiality and data-protection obligations.",
+    "privacy.s4.title": "4. Data retention",
+    "privacy.s4.text":
+      "We keep project and contact records for as long as needed to provide our services and to comply with legal, tax and accounting obligations under EU and Latvian law.",
+    "privacy.s5.title": "5. Your rights",
+    "privacy.s5.text":
+      "Under the GDPR you may request access to, correction of, or deletion of your personal data, and object to certain processing. To exercise these rights, contact us at the email below.",
+    "privacy.s6.title": "6. Cookies",
+    "privacy.s6.text":
+      "Our website uses essential cookies to function correctly and may use analytics cookies to help us improve. You can disable non-essential cookies in your browser settings.",
+    "privacy.s7.title": "7. Contact",
+    "privacy.s7.text":
+      "Questions about this policy or your data? Reach us at:",
   },
   lv: {
     "nav.products": "Produkti",
