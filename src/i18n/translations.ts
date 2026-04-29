@@ -43,9 +43,9 @@ export const translations: Record<Lang, Dict> = {
 
     // Home
     "home.hero.eyebrow": "Timber Smart Solution",
-    "home.hero.title": "Premium CLT & Thermowood Panels\nManufactured in Latvia since 2000",
+    "home.hero.title": "Premium CLT & Thermowood Panels",
     "home.hero.sub":
-      "Cross-Laminated Timber and Thermowood — engineered in the Baltics for long-lasting, chemical-free building.",
+      "Manufacturing Excellence Since 1999.",
     "home.adv.eyebrow": "Why Timber Smart",
     "home.adv.title": "Built right. Delivered fast. Priced for business.",
     "home.adv.1.title": "ISO & FSC certified production",
@@ -324,9 +324,9 @@ export const translations: Record<Lang, Dict> = {
     "common.send": "Sūtīt ziņojumu",
 
     "home.hero.eyebrow": "Timber Smart Solution",
-    "home.hero.title": "Augstākās klases CLT un termokoka paneļi\nRažoti Latvijā kopš 2000. gada",
+    "home.hero.title": "Augstākās klases CLT un termokoka paneļi",
     "home.hero.sub":
-      "Krustām līmēta koksne (CLT) un Thermowood — projektēti Baltijā ilgmūžīgai un ķīmiski tīrai būvniecībai.",
+      "Ražošanas izcilība kopš 1999. gada.",
     "home.adv.eyebrow": "Kāpēc Timber Smart",
     "home.adv.title": "Kvalitatīvi izgatavots. Ātri piegādāts. Cena, kas der biznesam.",
     "home.adv.1.title": "ISO un FSC sertificēta ražošana",
