@@ -17,15 +17,15 @@ const Home = () => {
   return (
     <>
       {/* HERO — editorial split, dark premium nordic */}
-      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background">
-        <div className="container-wide relative">
+      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background min-h-screen flex flex-col">
+        <div className="container-wide relative flex-1 flex flex-col">
           {/* Top horizontal eyebrow */}
-          <div className="flex items-center gap-4 pt-10 md:pt-12 text-[10px] uppercase tracking-[0.32em] text-background/55 font-light">
+          <div className="flex items-center gap-4 pt-8 md:pt-10 text-[10px] uppercase tracking-[0.32em] text-background/55 font-light">
             <span className="h-px w-10 bg-background/30" />
             {t("home.hero.eyebrow")}
           </div>
 
-          <div className="grid lg:grid-cols-12 lg:min-h-[82vh] items-stretch">
+          <div className="grid lg:grid-cols-12 items-stretch flex-1">
             {/* LEFT — text column */}
             <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-between py-12 md:py-16 lg:py-20 lg:pr-12">
               {/* top meta */}
@@ -36,7 +36,7 @@ const Home = () => {
 
               {/* headline */}
               <div className="py-12 md:py-16 lg:py-0 animate-fade-up">
-                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6.5rem] font-medium">
+                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Premium
                   <br />
                   CLT
