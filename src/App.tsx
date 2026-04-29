@@ -14,6 +14,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import About from "./pages/About";
 import Specs from "./pages/Specs";
 import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
