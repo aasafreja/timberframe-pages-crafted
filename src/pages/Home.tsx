@@ -16,33 +16,107 @@ const Home = () => {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-[88vh] flex items-end overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20">
-        <img
-          src={heroImg}
-          alt="Thermowood facade at golden hour"
-          className="absolute inset-0 h-full w-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-        <div className="container-wide relative z-10 pb-20 md:pb-28 text-background">
-          <div className="max-w-3xl animate-fade-up">
-            <div className="eyebrow text-background/70 mb-6">{t("home.hero.eyebrow")}</div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl text-background leading-[1.02] font-normal whitespace-pre-line">
-              {t("home.hero.title")}
-            </h1>
-            <p className="mt-8 text-base md:text-lg text-background/80 max-w-xl leading-relaxed font-light">
-              {t("home.hero.sub")}
-            </p>
-            <div className="mt-12 flex flex-wrap gap-8 items-center">
-              <Link to="/products" className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1 hover:border-background transition-colors">
-                {t("common.exploreProducts")}
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link to="/contact" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
-                {t("nav.quote")}
-              </Link>
+      {/* HERO — editorial split, premium nordic */}
+      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-background">
+        <div className="container-wide relative">
+          <div className="grid lg:grid-cols-12 lg:min-h-[88vh] items-stretch">
+            {/* LEFT — text column */}
+            <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-between py-14 md:py-20 lg:py-24 lg:pr-12 relative">
+              {/* vertical eyebrow rail (desktop) */}
+              <div className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full -rotate-90 origin-top-right items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-foreground/50 whitespace-nowrap">
+                <span className="h-px w-8 bg-foreground/30" />
+                {t("home.hero.eyebrow")}
+                <span className="h-px w-8 bg-foreground/30" />
+              </div>
+
+              {/* top meta */}
+              <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-foreground/55 font-light">
+                <span>Riga · Latvia</span>
+                <span className="hidden sm:inline">Est. 1999</span>
+              </div>
+
+              {/* headline */}
+              <div className="py-12 md:py-16 lg:py-0 animate-fade-up">
+                <div className="lg:hidden eyebrow mb-6">{t("home.hero.eyebrow")}</div>
+                <h1 className="font-serif text-foreground leading-[0.98] tracking-[-0.02em] text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6.5rem] font-normal">
+                  Premium
+                  <br />
+                  <span className="italic">CLT</span>
+                  <span className="text-foreground/40"> &amp; </span>
+                  <br className="sm:hidden" />
+                  Thermowood
+                </h1>
+
+                <p className="mt-8 md:mt-10 text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-md">
+                  {t("home.hero.sub")}
+                </p>
+              </div>
+
+              {/* bottom row — CTAs + index */}
+              <div className="flex flex-wrap items-end justify-between gap-8">
+                <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
+                  <Link
+                    to="/contact"
+                    className="group inline-flex items-center gap-3 text-foreground text-sm tracking-wide border-b border-foreground/50 pb-1.5 hover:border-foreground transition-colors"
+                  >
+                    {t("nav.quote")}
+                    <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    to="/products"
+                    className="text-foreground/60 text-sm tracking-wide hover:text-foreground transition-colors"
+                  >
+                    {t("common.exploreProducts")}
+                  </Link>
+                </div>
+                <div className="font-serif text-foreground/40 text-sm tracking-wide">
+                  <span className="italic">N°</span> 01 / 04
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT — image column, bleeds to viewport edge on desktop */}
+            <div className="lg:col-span-6 xl:col-span-7 relative min-h-[65vw] sm:min-h-[55vw] lg:min-h-0">
+              <div className="absolute inset-0 lg:left-0 lg:right-[calc(50%-50vw)]">
+                <img
+                  src={heroImg}
+                  alt="Thermowood facade at golden hour"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-foreground/25 via-transparent to-transparent" />
+
+                {/* floating caption card */}
+                <div className="hidden md:block absolute bottom-8 left-8 lg:bottom-10 lg:left-10 max-w-xs">
+                  <div className="bg-background/85 backdrop-blur-sm border border-border px-5 py-4">
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-foreground/50 mb-1.5">
+                      Featured
+                    </div>
+                    <div className="font-serif text-base text-foreground leading-snug">
+                      Thermowood facade,
+                      <br />
+                      Stockholm · 2024
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* bottom hairline meta-strip */}
+          <div className="border-t border-border">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border text-[11px] uppercase tracking-[0.22em] text-foreground/55 font-light">
+              {[
+                "FSC / PEFC certified",
+                "ISO 9001 : 2015",
+                "200+ m² / day",
+                "Delivery across EU",
+              ].map((m) => (
+                <div key={m} className="py-5 px-4 text-center">
+                  {m}
+                </div>
+              ))}
             </div>
           </div>
         </div>
