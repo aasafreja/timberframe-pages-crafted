@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { products } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
 import heroImg from "@/assets/products/clt-panel-2.jpeg";
@@ -7,55 +7,58 @@ import heroImg from "@/assets/products/clt-panel-2.jpeg";
 const Products = () => {
   const { t } = useI18n();
 
-  const bullets = ["FSC/PEFC Certified", "Custom Solutions", "Fast Delivery"];
+  const bullets = ["FSC / PEFC certified", "Custom solutions", "Fast delivery"];
 
   return (
     <>
-      {/* SPLIT HERO */}
-      <section className="relative -mt-16 md:-mt-20 grid grid-cols-1 lg:grid-cols-2 lg:min-h-[80vh]">
+      {/* MINIMAL SPLIT HERO */}
+      <section className="relative -mt-16 md:-mt-20 grid grid-cols-1 lg:grid-cols-2 lg:min-h-[82vh] border-b border-border">
         {/* LEFT — content */}
-        <div className="bg-[#0f0f0f] text-white flex items-center pt-24 md:pt-28 pb-16 lg:py-0">
-          <div className="w-full max-w-xl mx-auto px-6 md:px-10 lg:px-16 xl:px-20 lg:py-20">
-            <div className="text-[11px] md:text-xs uppercase tracking-[0.25em] font-medium text-[#D4A574] mb-6">
-              Timber Smart Solutions
-            </div>
-            <h1 className="text-white font-sans font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
-              Premium CLT &amp; Thermowood
+        <div className="bg-background flex items-center pt-28 md:pt-32 pb-16 lg:py-0 order-2 lg:order-1">
+          <div className="w-full max-w-xl mx-auto px-6 md:px-10 lg:px-16 xl:px-20 lg:py-24">
+            <div className="eyebrow mb-8">Timber Smart Solutions</div>
+
+            <h1 className="text-foreground leading-[1.04] text-5xl md:text-6xl lg:text-[4.25rem] font-light tracking-[-0.035em]">
+              Premium CLT
+              <br />
+              &amp; Thermowood
             </h1>
-            <p className="mt-5 text-base md:text-lg text-[#999999] font-light">
-              From Baltic to Europe
+
+            <p className="mt-8 text-base md:text-lg text-muted-foreground font-light max-w-md">
+              From the Baltic to Europe — engineered timber for considered architecture.
             </p>
 
-            <ul className="mt-10 space-y-4">
+            <ul className="mt-12 space-y-3 max-w-sm">
               {bullets.map((b) => (
-                <li key={b} className="flex items-center gap-3 text-[15px] md:text-base text-white/90">
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-[#D4A574]/40 shrink-0">
-                    <Check size={12} strokeWidth={2.5} className="text-[#D4A574]" />
-                  </span>
-                  <span className="font-light tracking-wide">{b}</span>
+                <li
+                  key={b}
+                  className="flex items-center justify-between gap-6 border-b border-border pb-3 text-sm text-foreground/80 font-light"
+                >
+                  <span>{b}</span>
+                  <span className="h-px w-6 bg-foreground/30" aria-hidden />
                 </li>
               ))}
             </ul>
 
             <Link
               to="/contact"
-              className="mt-12 inline-flex items-center gap-2 bg-[#D4A574] hover:bg-[#c8975f] text-[#0f0f0f] text-sm font-semibold tracking-wide uppercase px-7 py-4 transition-colors"
+              className="mt-12 inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors"
             >
-              Request Quote
-              <ArrowRight size={16} strokeWidth={2.2} />
+              Request a quote
+              <ArrowRight size={15} strokeWidth={1.4} />
             </Link>
           </div>
         </div>
 
         {/* RIGHT — image */}
-        <div className="relative min-h-[55vw] lg:min-h-0 overflow-hidden">
+        <div className="relative min-h-[60vw] lg:min-h-0 overflow-hidden order-1 lg:order-2">
           <img
             src={heroImg}
-            alt="Close-up of premium CLT and thermowood panel texture"
+            alt="Close-up of premium CLT and thermowood panels"
             className="absolute inset-0 h-full w-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-black/30" aria-hidden />
+          <div className="absolute inset-0 bg-foreground/10" aria-hidden />
         </div>
       </section>
 
