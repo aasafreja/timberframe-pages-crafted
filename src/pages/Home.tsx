@@ -148,19 +148,17 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
             {[
-              { n: "01", title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
-              { n: "02", title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
-              { n: "03", title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
-              { n: "04", title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
+              { Icon: HomeIcon, title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
+              { Icon: Layers, title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
+              { Icon: Blocks, title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
+              { Icon: Armchair, title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
             ].map((item, idx) => (
               <div
-                key={item.n}
+                key={item.title}
                 className={`group relative py-10 lg:py-12 px-0 lg:px-8 first:lg:pl-0 last:lg:pr-0 border-b sm:border-b-0 border-border ${idx > 0 ? "lg:border-l" : ""} ${idx % 2 === 1 ? "sm:border-l lg:border-l" : ""} ${idx < 2 ? "sm:border-b lg:border-b-0" : ""}`}
               >
-                <div className="flex items-baseline justify-between mb-8">
-                  <span className="font-display text-2xl text-foreground/30 font-light tracking-tight">
-                    {item.n}
-                  </span>
+                <div className="flex items-center justify-between mb-8">
+                  <item.Icon className="text-foreground/70 group-hover:text-accent transition-colors" size={28} strokeWidth={1.2} />
                   <span className="h-px w-8 bg-foreground/20 group-hover:w-16 group-hover:bg-foreground/60 transition-all duration-500" />
                 </div>
                 <h3 className="text-base md:text-lg font-normal leading-snug mb-3">
