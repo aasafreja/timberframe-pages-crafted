@@ -69,13 +69,23 @@ export const Header = () => {
           </Link>
         </div>
 
-        <button
-          className="lg:hidden p-2 -mr-2 text-foreground"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={t("nav.menu")}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={`tel:${company.phones[0].replace(/\s/g, "")}`}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[12px] font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-label={company.phones[0]}
+          >
+            <Phone size={14} strokeWidth={1.6} />
+            <span className="hidden sm:inline">{company.phones[0]}</span>
+          </a>
+          <button
+            className="p-2 -mr-2 text-foreground"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={t("nav.menu")}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {open && (
