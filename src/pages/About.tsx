@@ -59,6 +59,7 @@ const About = () => {
         title={t("about.title")}
         description={t("about.desc")}
         image={aboutHero}
+        overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
         secondary={{ label: "Our process", href: "/process" }}
         meta={["Riga, Latvia", "Since 1999", "ISO 9001 · FSC"]}

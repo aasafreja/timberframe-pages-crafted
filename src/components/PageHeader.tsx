@@ -9,6 +9,7 @@ type Props = {
   meta?: string[];
   cta?: { label: string; to: string };
   secondary?: { label: string; href: string };
+  overlay?: "default" | "strong";
 };
 
 export const PageHeader = ({
@@ -19,6 +20,7 @@ export const PageHeader = ({
   meta,
   cta,
   secondary,
+  overlay = "default",
 }: Props) => {
   if (image) {
     return (
@@ -31,7 +33,11 @@ export const PageHeader = ({
           loading="eager"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"
+          className={
+            overlay === "strong"
+              ? "absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50"
+              : "absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"
+          }
           aria-hidden
         />
 
