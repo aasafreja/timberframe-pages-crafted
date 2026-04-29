@@ -59,6 +59,9 @@ const About = () => {
         title={t("about.title")}
         description={t("about.desc")}
         image={aboutHero}
+        cta={{ label: t("nav.quote"), to: "/contact" }}
+        secondary={{ label: "Our process", href: "/process" }}
+        meta={["Riga, Latvia", "Since 1999", "ISO 9001 · FSC"]}
       />
 
       <section className="py-16 md:py-20 border-b border-border">
