@@ -48,6 +48,7 @@ const Portfolio = () => {
         eyebrow={t("portfolio.eyebrow")}
         title={t("portfolio.title")}
         description={t("portfolio.desc")}
+        image={heroImg}
       />
 
       <section className="py-16 md:py-24">
