@@ -34,6 +34,9 @@ const Process = () => {
         title={t("process.title")}
         description={t("process.desc")}
         image={heroImg}
+        cta={{ label: t("nav.quote"), to: "/contact" }}
+        secondary={{ label: t("common.viewAll") ?? "View products", href: "/products" }}
+        meta={["Consultation", "Design & production", "Delivery across EU"]}
       />
 
       <section className="py-20 md:py-28">

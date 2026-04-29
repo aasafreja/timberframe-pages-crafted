@@ -49,6 +49,9 @@ const Portfolio = () => {
         title={t("portfolio.title")}
         description={t("portfolio.desc")}
         image={heroImg}
+        cta={{ label: t("nav.quote"), to: "/contact" }}
+        secondary={{ label: "View references", href: "#references" }}
+        meta={["Sweden · 2024", "Germany · 2024", "Finland · 2023"]}
       />
 
       <section className="py-16 md:py-24">

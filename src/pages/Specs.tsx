@@ -47,6 +47,9 @@ const Specs = () => {
         title={t("specs.title")}
         description={t("specs.desc")}
         image={specsHero}
+        cta={{ label: t("nav.quote"), to: "/contact" }}
+        secondary={{ label: "Download datasheet", href: "#datasheets" }}
+        meta={["CLT panels", "Thermowood", "Acoustic systems"]}
       />
 
       <section className="py-16 md:py-20">
