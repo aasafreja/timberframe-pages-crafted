@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { PageHeader } from "@/components/PageHeader";
 import { useI18n } from "@/i18n/I18nProvider";
+import heroImg from "@/assets/project-interior.jpg";
 
 const Process = () => {
   const { t } = useI18n();
@@ -32,6 +33,7 @@ const Process = () => {
         eyebrow={t("process.eyebrow")}
         title={t("process.title")}
         description={t("process.desc")}
+        image={heroImg}
       />
 
       <section className="py-20 md:py-28">

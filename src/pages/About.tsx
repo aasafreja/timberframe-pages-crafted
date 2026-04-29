@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/PageHeader";
+import aboutHero from "@/assets/project-residential.jpg";
 import { stats, company } from "@/data/site";
 import {
   Leaf,
@@ -57,6 +58,7 @@ const About = () => {
         eyebrow={t("about.eyebrow")}
         title={t("about.title")}
         description={t("about.desc")}
+        image={aboutHero}
       />
 
       <section className="py-16 md:py-20 border-b border-border">

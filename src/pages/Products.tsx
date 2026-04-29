@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { products } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
+import heroImg from "@/assets/products/clt-panel-2.jpeg";
 
 const Products = () => {
   const { t } = useI18n();
@@ -12,6 +13,7 @@ const Products = () => {
         eyebrow={t("products.eyebrow")}
         title={t("products.title")}
         description={t("products.desc")}
+        image={heroImg}
       />
       <section className="py-16 md:py-24">
         <div className="container-wide grid gap-x-10 gap-y-16 md:grid-cols-2">

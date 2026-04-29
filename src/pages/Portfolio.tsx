@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { useI18n } from "@/i18n/I18nProvider";
+import heroImg from "@/assets/project-commercial.jpg";
 
 type Reference = {
   title: string;
@@ -47,6 +48,7 @@ const Portfolio = () => {
         eyebrow={t("portfolio.eyebrow")}
         title={t("portfolio.title")}
         description={t("portfolio.desc")}
+        image={heroImg}
       />
 
       <section className="py-16 md:py-24">

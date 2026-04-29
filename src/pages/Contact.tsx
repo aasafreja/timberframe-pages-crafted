@@ -2,6 +2,7 @@ import { useState, FormEvent, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import contactHero from "@/assets/project-cabin.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -46,6 +47,7 @@ const Contact = () => {
         eyebrow={t("contact.eyebrow")}
         title={t("contact.title")}
         description={t("contact.desc")}
+        image={contactHero}
       />
 
       <section className="py-16 md:py-24">
