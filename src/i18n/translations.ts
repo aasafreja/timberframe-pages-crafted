@@ -46,17 +46,23 @@ export const translations: Record<Lang, Dict> = {
     "home.hero.title": "Reconnecting nature\nwith architecture.",
     "home.hero.sub":
       "Cross-Laminated Timber and Thermowood — engineered in the Baltics for long-lasting, chemical-free building.",
-    "home.adv.eyebrow": "Why timber smart",
-    "home.adv.title": "Wood that performs as beautifully as it ages.",
-    "home.adv.1.title": "Chemical-free",
+    "home.adv.eyebrow": "Why Timber Smart",
+    "home.adv.title": "Built right. Delivered fast. Priced for business.",
+    "home.adv.1.title": "ISO & FSC certified production",
     "home.adv.1.text":
-      "Treated with heat and steam only — safe for people, generous to the environment.",
-    "home.adv.2.title": "Built to last",
+      "Independently audited quality and chain-of-custody from sustainably managed forests.",
+    "home.adv.2.title": "Custom designs & specifications",
     "home.adv.2.text":
-      "Dimensional stability, decay & insect resistance, 30+ years of service life.",
-    "home.adv.3.title": "Architect-grade",
+      "Bespoke geometry, profiles and finishes engineered to your project drawings.",
+    "home.adv.3.title": "Fast turnaround time (2–4 weeks)",
     "home.adv.3.text":
-      "Custom geometry, finishes and CAD-ready specs for ambitious projects.",
+      "Predictable lead times for standard items — most orders ship within four weeks.",
+    "home.adv.4.title": "Competitive pricing for bulk orders",
+    "home.adv.4.text":
+      "Volume-based pricing tiers for developers, contractors and resellers.",
+    "home.adv.5.title": "Direct B2B partnership model",
+    "home.adv.5.text":
+      "Work directly with our team — no middlemen, transparent terms, long-term partnership.",
     "home.products.eyebrow": "Our products",
     "home.products.title": "Four ways to bring real wood into your project.",
     "home.portfolio.eyebrow": "Selected work",
