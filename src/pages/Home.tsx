@@ -127,6 +127,54 @@ const Home = () => {
         </div>
       </section>
 
+      {/* WHAT IS CLT */}
+      <section className="border-t border-border py-20 md:py-28">
+        <div className="container-wide">
+          <div className="grid gap-12 lg:gap-16 lg:grid-cols-12 mb-16 md:mb-20">
+            <div className="lg:col-span-5">
+              <div className="eyebrow mb-4">Material · 101</div>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-[-0.03em] font-medium">
+                What is CLT
+                <br />
+                <span className="text-foreground/40">(Cross-Laminated Timber)?</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7 flex items-end">
+              <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
+                CLT is a high-performance engineered wood product made from multiple layers of timber glued together perpendicularly. It serves as both a structural and finishing material in construction.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
+            {[
+              { n: "01", title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
+              { n: "02", title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
+              { n: "03", title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
+              { n: "04", title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
+            ].map((item, idx) => (
+              <div
+                key={item.n}
+                className={`group relative py-10 lg:py-12 px-0 lg:px-8 first:lg:pl-0 last:lg:pr-0 border-b sm:border-b-0 border-border ${idx > 0 ? "lg:border-l" : ""} ${idx % 2 === 1 ? "sm:border-l lg:border-l" : ""} ${idx < 2 ? "sm:border-b lg:border-b-0" : ""}`}
+              >
+                <div className="flex items-baseline justify-between mb-8">
+                  <span className="font-display text-2xl text-foreground/30 font-light tracking-tight">
+                    {item.n}
+                  </span>
+                  <span className="h-px w-8 bg-foreground/20 group-hover:w-16 group-hover:bg-foreground/60 transition-all duration-500" />
+                </div>
+                <h3 className="text-base md:text-lg font-normal leading-snug mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCTION PROCESS */}
       <section className="bg-secondary/40 border-y border-border py-20 md:py-28">
         <div className="container-wide">
