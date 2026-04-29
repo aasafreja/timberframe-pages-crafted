@@ -40,7 +40,7 @@ export const PageHeader = ({
             {eyebrow && (
               <div className="eyebrow text-background/70 mb-6">{eyebrow}</div>
             )}
-            <h1 className="text-background leading-[1.02] tracking-[-0.04em] font-light text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+            <h1 className="text-background leading-[1.02] tracking-[-0.04em] font-light text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] whitespace-pre-line">
               {title}
             </h1>
             {description && (
