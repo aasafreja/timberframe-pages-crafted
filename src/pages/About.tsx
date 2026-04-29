@@ -153,10 +153,6 @@ const About = () => {
                   <Check size={16} strokeWidth={1.4} className="text-accent mt-0.5 shrink-0" />
                   <span>{t("about.ceo.exp2")}</span>
                 </li>
-                <li className="flex items-start gap-3 border-b border-border pb-3">
-                  <Check size={16} strokeWidth={1.4} className="text-accent mt-0.5 shrink-0" />
-                  <span>{t("about.ceo.exp3")}</span>
-                </li>
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
