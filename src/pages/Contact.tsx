@@ -48,6 +48,7 @@ const Contact = () => {
         title={t("contact.title")}
         description={t("contact.desc")}
         image={contactHero}
+        overlay="strong"
         cta={{ label: t("common.send"), to: "#form" }}
         secondary={{ label: "+371 2929 5353", href: "tel:+37129295353" }}
         meta={["Riga, Latvia", "Mon – Fri · 09 – 18", "EN · LV · DE"]}

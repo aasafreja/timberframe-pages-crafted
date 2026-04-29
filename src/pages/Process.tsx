@@ -34,6 +34,7 @@ const Process = () => {
         title={t("process.title")}
         description={t("process.desc")}
         image={heroImg}
+        overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
         secondary={{ label: t("common.viewAll") ?? "View products", href: "/products" }}
         meta={["Consultation", "Design & production", "Delivery across EU"]}
