@@ -1,13 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, ReactNode } from "react";
 import { Lang, translations } from "./translations";
-
-type Ctx = {
-  lang: Lang;
-  setLang: (l: Lang) => void;
-  t: (key: string, vars?: Record<string, string | number>) => string;
-};
-
-const I18nContext = createContext<Ctx | null>(null);
+import { I18nContext } from "./context";
+export { useI18n } from "./useI18n";
 
 const STORAGE_KEY = "tss.lang";
 
@@ -43,10 +37,4 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 
   const value = useMemo(() => ({ lang, setLang, t }), [lang, setLang, t]);
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
-};
-
-export const useI18n = () => {
-  const ctx = useContext(I18nContext);
-  if (!ctx) throw new Error("useI18n must be used inside I18nProvider");
-  return ctx;
 };
