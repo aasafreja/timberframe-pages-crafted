@@ -74,6 +74,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* TRUSTED BY */}
+      <section className="border-t border-border py-16 md:py-20">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <div className="eyebrow mb-3">{t("home.trusted.eyebrow")}</div>
+            <h2 className="text-2xl md:text-3xl font-normal text-foreground/80">
+              {t("home.trusted.title")}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
+            {["NORDHAUS", "BALTIC BUILD", "ARKTIK", "FORMA", "LIGNUM", "SKANDI CO"].map((logo) => (
+              <div
+                key={logo}
+                className="text-center text-sm md:text-base tracking-[0.25em] text-foreground/40 hover:text-foreground/70 transition-colors font-light"
+              >
+                {logo}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCTS */}
       <section className="bg-secondary/50 py-20 md:py-28 border-y border-border">
         <div className="container-wide">
