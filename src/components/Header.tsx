@@ -33,15 +33,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${
-        scrolled || open
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-border transition-all"
     >
-      <div className={`container-wide flex h-16 md:h-20 items-center justify-between ${
-        scrolled || open ? "text-foreground" : "text-background"
-      }`}>
+      <div className="container-wide flex h-16 md:h-20 items-center justify-between text-foreground">
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -51,13 +45,7 @@ export const Header = () => {
               to={item.to}
               className={({ isActive }) =>
                 `text-[13px] font-normal tracking-wide transition-colors ${
-                  scrolled || open
-                    ? isActive
-                      ? "text-foreground"
-                      : "text-foreground/60 hover:text-foreground"
-                    : isActive
-                      ? "text-background"
-                      : "text-background/70 hover:text-background"
+                  isActive ? "text-foreground" : "text-foreground/60 hover:text-foreground"
                 }`
               }
             >
@@ -68,14 +56,10 @@ export const Header = () => {
 
         <div className="hidden lg:flex items-center gap-6">
           <LanguageSwitcher />
-          <span className={`h-4 w-px ${scrolled || open ? "bg-border" : "bg-background/30"}`} aria-hidden />
+          <span className="h-4 w-px bg-border" aria-hidden />
           <Link
             to="/contact"
-            className={`text-sm font-medium border-b pb-0.5 transition-colors ${
-              scrolled || open
-                ? "border-foreground/40 hover:border-foreground"
-                : "border-background/50 hover:border-background"
-            }`}
+            className="text-sm font-medium border-b border-foreground/40 pb-0.5 hover:border-foreground transition-colors"
           >
             {t("nav.quote")}
           </Link>
@@ -84,11 +68,7 @@ export const Header = () => {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={`tel:${company.phones[0].replace(/\s/g, "")}`}
-            className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
-              scrolled || open
-                ? "text-foreground/80 hover:text-foreground"
-                : "text-background/90 hover:text-background"
-            }`}
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[12px] font-medium text-foreground/80 hover:text-foreground transition-colors"
             aria-label={company.phones[0]}
           >
             <Phone size={14} strokeWidth={1.6} />
