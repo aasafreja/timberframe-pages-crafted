@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake } from "lucide-react";
+import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake, Home as HomeIcon, Layers, Blocks, Armchair } from "lucide-react";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -148,19 +148,17 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
             {[
-              { n: "01", title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
-              { n: "02", title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
-              { n: "03", title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
-              { n: "04", title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
+              { Icon: HomeIcon, title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
+              { Icon: Layers, title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
+              { Icon: Blocks, title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
+              { Icon: Armchair, title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
             ].map((item, idx) => (
               <div
-                key={item.n}
+                key={item.title}
                 className={`group relative py-10 lg:py-12 px-0 lg:px-8 first:lg:pl-0 last:lg:pr-0 border-b sm:border-b-0 border-border ${idx > 0 ? "lg:border-l" : ""} ${idx % 2 === 1 ? "sm:border-l lg:border-l" : ""} ${idx < 2 ? "sm:border-b lg:border-b-0" : ""}`}
               >
-                <div className="flex items-baseline justify-between mb-8">
-                  <span className="font-display text-2xl text-foreground/30 font-light tracking-tight">
-                    {item.n}
-                  </span>
+                <div className="flex items-center justify-between mb-8">
+                  <item.Icon className="text-foreground/70 group-hover:text-accent transition-colors" size={28} strokeWidth={1.2} />
                   <span className="h-px w-8 bg-foreground/20 group-hover:w-16 group-hover:bg-foreground/60 transition-all duration-500" />
                 </div>
                 <h3 className="text-base md:text-lg font-normal leading-snug mb-3">
@@ -169,6 +167,61 @@ const Home = () => {
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">
                   {item.text}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCTS */}
+      <section className="bg-secondary/50 py-20 md:py-28 border-y border-border">
+        <div className="container-wide">
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
+            <div>
+              <div className="eyebrow mb-4">{t("home.products.eyebrow")}</div>
+              <h2 className="text-3xl md:text-5xl max-w-xl font-normal">
+                {t("home.products.title")}
+              </h2>
+            </div>
+            <Link to="/products" className="link-underline text-sm">
+              {t("common.viewAll")} <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {products.map((p) => (
+              <Link
+                key={p.slug}
+                to={`/products/${p.slug}`}
+                className="group block"
+              >
+                <div className="aspect-[4/5] overflow-hidden bg-muted">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="pt-4 space-y-1">
+                  <h3 className="text-base font-normal">{p.name}</h3>
+                  <p className="text-xs text-muted-foreground font-light">{p.tagline}</p>
+                  <div className="pt-2 text-xs text-foreground/60">{p.price}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATISTICS */}
+      <section className="py-20 md:py-28">
+        <div className="container-wide">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 text-center md:text-left">
+            {stats.map((s, i) => (
+              <div key={i} className="space-y-3 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
+                <div className="font-display text-5xl md:text-6xl text-foreground font-normal">{s.value}</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">{t(`stats.${i}`)}</div>
               </div>
             ))}
           </div>
@@ -236,61 +289,6 @@ const Home = () => {
                 className="text-center text-sm md:text-base tracking-[0.25em] text-foreground/40 hover:text-foreground/70 transition-colors font-light"
               >
                 {logo}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCTS */}
-      <section className="bg-secondary/50 py-20 md:py-28 border-y border-border">
-        <div className="container-wide">
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
-            <div>
-              <div className="eyebrow mb-4">{t("home.products.eyebrow")}</div>
-              <h2 className="text-3xl md:text-5xl max-w-xl font-normal">
-                {t("home.products.title")}
-              </h2>
-            </div>
-            <Link to="/products" className="link-underline text-sm">
-              {t("common.viewAll")} <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((p) => (
-              <Link
-                key={p.slug}
-                to={`/products/${p.slug}`}
-                className="group block"
-              >
-                <div className="aspect-[4/5] overflow-hidden bg-muted">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="pt-4 space-y-1">
-                  <h3 className="text-base font-normal">{p.name}</h3>
-                  <p className="text-xs text-muted-foreground font-light">{p.tagline}</p>
-                  <div className="pt-2 text-xs text-foreground/60">{p.price}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STATISTICS */}
-      <section className="py-20 md:py-28">
-        <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 text-center md:text-left">
-            {stats.map((s, i) => (
-              <div key={i} className="space-y-3 md:border-l md:border-border md:pl-6 first:border-l-0 first:pl-0">
-                <div className="font-display text-5xl md:text-6xl text-foreground font-normal">{s.value}</div>
-                <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground">{t(`stats.${i}`)}</div>
               </div>
             ))}
           </div>
