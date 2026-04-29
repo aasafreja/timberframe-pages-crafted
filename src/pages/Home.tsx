@@ -55,12 +55,21 @@ const Home = () => {
             <div className="eyebrow mb-4">{t("home.adv.eyebrow")}</div>
             <h2 className="text-3xl md:text-4xl">{t("home.adv.title")}</h2>
           </div>
-          <div className="lg:col-span-8 grid gap-10 sm:grid-cols-3">
+          <div className="lg:col-span-8 grid gap-8 sm:grid-cols-2">
             {advantages.map(({ Icon, title, text }) => (
-              <div key={title} className="space-y-4 border-t border-border pt-6">
-                <Icon className="text-foreground/70" size={22} strokeWidth={1.4} />
-                <h3 className="text-xl font-normal">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
+              <div
+                key={title}
+                className="group relative flex gap-5 border-t border-border pt-6 transition-colors hover:border-foreground/40"
+              >
+                <div className="shrink-0">
+                  <div className="flex h-11 w-11 items-center justify-center bg-secondary/60 group-hover:bg-accent/15 transition-colors">
+                    <Icon className="text-foreground/80 group-hover:text-accent transition-colors" size={20} strokeWidth={1.4} />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-base md:text-lg font-normal leading-snug">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
+                </div>
               </div>
             ))}
           </div>
