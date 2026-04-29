@@ -369,10 +369,16 @@ export const translations: Record<Lang, Dict> = {
     "products.desc":
       "Mērķtiecīgs CLT, Thermowood un akustisko paneļu klāsts — radīts Baltijā vērienīgai arhitektūrai.",
 
-    "portfolio.eyebrow": "Portfolio",
-    "portfolio.title": "Atlasītie projekti",
+    "portfolio.eyebrow": "Atsauces projekti",
+    "portfolio.title": "Kur izmantota mūsu koksne.",
     "portfolio.desc":
-      "Neliels ēku un interjeru izlases klāsts, būvēti ar mūsu koksni. Filtrējiet pēc kategorijas.",
+      "Īss saraksts ar nesenajiem projektiem Eiropā, kuri uzticējās mūsu paneļiem — pierādījumi, nevis attēli.",
+    "portfolio.list.eyebrow": "Nesenās atsauces",
+    "portfolio.list.title": "Mūsu paneļi izmantoti:",
+    "portfolio.list.area": "Platība",
+    "portfolio.list.materials": "Materiāli",
+    "portfolio.list.footnote":
+      "Pilna projektu dokumentācija, rasējumi un atsauces pieejamas pēc pieprasījuma.",
     "portfolio.filter.All": "Visi",
     "portfolio.filter.Residential": "Dzīvojamie",
     "portfolio.filter.Commercial": "Komerciālie",
