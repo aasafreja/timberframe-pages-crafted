@@ -43,7 +43,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Home
     "home.hero.eyebrow": "Timber Smart Solution",
-    "home.hero.title": "Reconnecting nature\nwith architecture.",
+    "home.hero.title": "Premium CLT & Thermowood Panels\nManufactured in Latvia since 2000",
     "home.hero.sub":
       "Cross-Laminated Timber and Thermowood — engineered in the Baltics for long-lasting, chemical-free building.",
     "home.adv.eyebrow": "Why Timber Smart",
