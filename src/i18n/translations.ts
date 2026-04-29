@@ -12,7 +12,7 @@ export const translations: Record<Lang, Dict> = {
     // Header
     "nav.products": "Products",
     "nav.process": "How it works",
-    "nav.portfolio": "Portfolio",
+    "nav.portfolio": "Reference projects",
     "nav.about": "About",
     "nav.specs": "Tech specs",
     "nav.contact": "Contact",
@@ -90,11 +90,17 @@ export const translations: Record<Lang, Dict> = {
     "products.desc":
       "A focused range of CLT, thermowood and acoustic panels — engineered in the Baltics, ready for ambitious architecture.",
 
-    // Portfolio
-    "portfolio.eyebrow": "Portfolio",
-    "portfolio.title": "Selected projects",
+    // Portfolio (reference projects)
+    "portfolio.eyebrow": "Reference projects",
+    "portfolio.title": "Where our timber has been built in.",
     "portfolio.desc":
-      "A small selection of buildings and interiors built with our timber. Filter by category to explore.",
+      "A short list of recent projects across Europe that trusted our panels — credentials over imagery.",
+    "portfolio.list.eyebrow": "Recent references",
+    "portfolio.list.title": "Our panels have been used in:",
+    "portfolio.list.area": "Area",
+    "portfolio.list.materials": "Materials",
+    "portfolio.list.footnote":
+      "Full project documentation, drawings and references available on request.",
     "portfolio.filter.All": "All",
     "portfolio.filter.Residential": "Residential",
     "portfolio.filter.Commercial": "Commercial",
@@ -290,7 +296,7 @@ export const translations: Record<Lang, Dict> = {
   lv: {
     "nav.products": "Produkti",
     "nav.process": "Kā tas notiek",
-    "nav.portfolio": "Portfolio",
+    "nav.portfolio": "Atsauces projekti",
     "nav.about": "Par mums",
     "nav.specs": "Tehniskie dati",
     "nav.contact": "Kontakti",
@@ -363,10 +369,16 @@ export const translations: Record<Lang, Dict> = {
     "products.desc":
       "Mērķtiecīgs CLT, Thermowood un akustisko paneļu klāsts — radīts Baltijā vērienīgai arhitektūrai.",
 
-    "portfolio.eyebrow": "Portfolio",
-    "portfolio.title": "Atlasītie projekti",
+    "portfolio.eyebrow": "Atsauces projekti",
+    "portfolio.title": "Kur izmantota mūsu koksne.",
     "portfolio.desc":
-      "Neliels ēku un interjeru izlases klāsts, būvēti ar mūsu koksni. Filtrējiet pēc kategorijas.",
+      "Īss saraksts ar nesenajiem projektiem Eiropā, kuri uzticējās mūsu paneļiem — pierādījumi, nevis attēli.",
+    "portfolio.list.eyebrow": "Nesenās atsauces",
+    "portfolio.list.title": "Mūsu paneļi izmantoti:",
+    "portfolio.list.area": "Platība",
+    "portfolio.list.materials": "Materiāli",
+    "portfolio.list.footnote":
+      "Pilna projektu dokumentācija, rasējumi un atsauces pieejamas pēc pieprasījuma.",
     "portfolio.filter.All": "Visi",
     "portfolio.filter.Residential": "Dzīvojamie",
     "portfolio.filter.Commercial": "Komerciālie",

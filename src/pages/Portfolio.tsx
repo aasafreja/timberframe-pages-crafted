@@ -1,15 +1,45 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
-import { projects } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
 
-const FILTERS = ["All", "Residential", "Commercial", "Interior"] as const;
+type Reference = {
+  title: string;
+  country: string;
+  year: string;
+  area: string;
+  materials: string;
+  partner: { role: string; name: string };
+};
+
+const REFERENCES: Reference[] = [
+  {
+    title: "Stockholm Office Complex",
+    country: "Sweden",
+    year: "2024",
+    area: "500 m²",
+    materials: "CLT panels",
+    partner: { role: "Architect", name: "[Name]" },
+  },
+  {
+    title: "Berlin Residential",
+    country: "Germany",
+    year: "2024",
+    area: "1200 m²",
+    materials: "CLT + Thermowood",
+    partner: { role: "Architect", name: "[Name]" },
+  },
+  {
+    title: "Helsinki Industrial",
+    country: "Finland",
+    year: "2023",
+    area: "800 m²",
+    materials: "Custom panels",
+    partner: { role: "Contractor", name: "[Name]" },
+  },
+];
 
 const Portfolio = () => {
   const { t } = useI18n();
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
-  const list = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <>
@@ -19,52 +49,62 @@ const Portfolio = () => {
         description={t("portfolio.desc")}
       />
 
-      <section className="py-12 md:py-16">
-        <div className="container-wide">
-          <div className="flex flex-wrap gap-6 mb-12 border-b border-border pb-5">
-            {FILTERS.map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`text-sm tracking-wide transition-colors pb-1 border-b ${
-                  filter === f
-                    ? "text-foreground border-foreground"
-                    : "text-foreground/50 border-transparent hover:text-foreground"
-                }`}
-              >
-                {t(`portfolio.filter.${f}`)}
-              </button>
-            ))}
-          </div>
+      <section className="py-16 md:py-24">
+        <div className="container-wide max-w-4xl">
+          <div className="eyebrow mb-4">{t("portfolio.list.eyebrow")}</div>
+          <h2 className="text-2xl md:text-3xl font-normal mb-12 max-w-2xl">
+            {t("portfolio.list.title")}
+          </h2>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {list.map((p) => (
-              <Link key={p.id} to={`/portfolio/${p.id}`} className="group block animate-fade-up">
-                <div className="aspect-[4/5] overflow-hidden bg-muted">
-                  <img
-                    src={p.cover}
-                    alt={p.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          <ul className="border-t border-border">
+            {REFERENCES.map((r) => (
+              <li
+                key={r.title}
+                className="border-b border-border py-8 md:py-10 grid gap-6 md:grid-cols-12 md:gap-8 items-start"
+              >
+                <div className="md:col-span-5 flex gap-4">
+                  <Check
+                    size={18}
+                    strokeWidth={1.4}
+                    className="text-accent shrink-0 mt-1"
                   />
-                </div>
-                <div className="pt-5 flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-normal">{p.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1 font-light">
-                      {p.location} · {p.year}
-                    </p>
-                    <p className="text-xs text-muted-foreground/80 mt-2 font-light">
-                      {p.products.join(" · ")}
+                    <h3 className="text-lg md:text-xl font-normal leading-snug">
+                      {r.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground font-light mt-1">
+                      {r.country} · {r.year}
                     </p>
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap pt-1">
-                    {t(`portfolio.filter.${p.category}`)}
-                  </span>
                 </div>
-              </Link>
+
+                <div className="md:col-span-3">
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">
+                    {t("portfolio.list.area")}
+                  </div>
+                  <div className="text-sm font-light">{r.area}</div>
+                </div>
+
+                <div className="md:col-span-2">
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">
+                    {t("portfolio.list.materials")}
+                  </div>
+                  <div className="text-sm font-light">{r.materials}</div>
+                </div>
+
+                <div className="md:col-span-2">
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">
+                    {r.partner.role}
+                  </div>
+                  <div className="text-sm font-light">{r.partner.name}</div>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
+
+          <p className="mt-10 text-sm text-muted-foreground font-light max-w-xl">
+            {t("portfolio.list.footnote")}
+          </p>
         </div>
       </section>
     </>
