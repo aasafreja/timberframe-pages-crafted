@@ -292,6 +292,20 @@ export const translations: Record<Lang, Dict> = {
     "privacy.s7.title": "7. Contact",
     "privacy.s7.text":
       "Questions about this policy or your data? Reach us at:",
+
+    "home.process.eyebrow": "How we work",
+    "home.process.title": "Our Production Process",
+    "home.process.desc":
+      "From first consultation to delivery — a streamlined four-step workflow refined over 25 years of timber manufacturing.",
+    "home.process.s1.title": "Consultation",
+    "home.process.s1.text": "Project briefing, material guidance and budget framing.",
+    "home.process.s2.title": "Design",
+    "home.process.s2.text": "Engineering, layouts and shop drawings tailored to your spec.",
+    "home.process.s3.title": "Production",
+    "home.process.s3.text": "CNC cutting, lamination and quality-controlled finishing in our Riga facility.",
+    "home.process.s4.title": "Delivery",
+    "home.process.s4.text": "Climate-protected packaging and on-time freight across Europe.",
+    "home.process.cta": "See how it works",
   },
   lv: {
     "nav.products": "Produkti",
@@ -564,5 +578,19 @@ export const translations: Record<Lang, Dict> = {
     "privacy.s7.title": "7. Kontakti",
     "privacy.s7.text":
       "Jautājumi par šo politiku vai jūsu datiem? Sazinieties:",
+
+    "home.process.eyebrow": "Kā mēs strādājam",
+    "home.process.title": "Mūsu ražošanas process",
+    "home.process.desc":
+      "No pirmās konsultācijas līdz piegādei — vienkāršs četru soļu process, ko esam pilnveidojuši 25 gadu laikā.",
+    "home.process.s1.title": "Konsultācija",
+    "home.process.s1.text": "Projekta apspriešana, materiālu izvēle un budžeta plānošana.",
+    "home.process.s2.title": "Dizains",
+    "home.process.s2.text": "Inženierija, izkārtojumi un rasējumi pēc jūsu specifikācijas.",
+    "home.process.s3.title": "Ražošana",
+    "home.process.s3.text": "CNC griešana, laminēšana un kvalitātes kontrole mūsu Rīgas rūpnīcā.",
+    "home.process.s4.title": "Piegāde",
+    "home.process.s4.text": "Klimata aizsardzība iepakojumā un savlaicīga piegāde visā Eiropā.",
+    "home.process.cta": "Skatīt, kā tas notiek",
   },
 };
