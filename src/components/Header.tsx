@@ -33,15 +33,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${
-        scrolled || open
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-border transition-all"
     >
-      <div className={`container-wide flex h-16 md:h-20 items-center justify-between ${
-        scrolled || open ? "text-foreground" : "text-background"
-      }`}>
+      <div className="container-wide flex h-16 md:h-20 items-center justify-between text-foreground">
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8">
