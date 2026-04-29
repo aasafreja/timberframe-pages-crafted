@@ -35,16 +35,16 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "clt-panels",
-    name: "CLT Panels",
+    name: "CLT Panel with Thermal Wood",
     tagline: "Decorative micro cross-laminated timber",
     price: "from € 37",
     image: cltPanel1,
     gallery: [cltPanel1, cltPanel2, cltThermo],
     description:
-      "High-performance engineered wood made from multiple layers of timber glued perpendicularly. Serves as both a structural and finishing material in modern construction — ideal for residential buildings, interiors and modular assembly.",
+      "High-quality pine tree board ideal for furniture making. High-performance engineered wood made from multiple layers of timber glued perpendicularly, paired with thermal wood facing. Serves as both a structural and finishing material in modern construction — ideal for residential buildings, interiors and modular assembly.",
     specs: [
       { label: "Layers", value: "3 / 5 / 7 cross-laminated" },
-      { label: "Thickness", value: "20 – 100 mm" },
+      { label: "Thickness", value: "1 – 2 inch" },
       { label: "Width", value: "up to 1250 mm" },
       { label: "Length", value: "up to 5000 mm" },
       { label: "Wood species", value: "Nordic spruce / pine" },
@@ -52,34 +52,16 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "thermowood-cladding",
-    name: "Thermowood Cladding",
-    tagline: "Heat-treated, chemical-free, made to last",
-    price: "on request",
-    image: thermowood,
-    gallery: [thermowood, cltThermo, cltPanel2],
-    description:
-      "Wood treated at 160–230°C in an oxygen-free environment. Highly resistant to moisture, decay and pests — a beautiful, sustainable choice for both interior and exterior applications. 25% lower thermal conductivity than untreated wood.",
-    specs: [
-      { label: "Treatment", value: "160 – 230 °C, oxygen-free" },
-      { label: "Profile", value: "vertical / horizontal cladding" },
-      { label: "Thickness", value: "20 / 26 / 32 mm" },
-      { label: "Class", value: "Thermo-D (exterior)" },
-      { label: "Service life", value: "30+ years" },
-      { label: "Chemicals", value: "none" },
-    ],
-  },
-  {
     slug: "acoustic-panels",
-    name: "Acoustic Panels",
+    name: "Acoustic Panel",
     tagline: "Eco pine slat panels for refined interiors",
     price: "€ 55,00 / panel",
     image: acousticPanel,
     gallery: [acousticPanel, cltPanel1, cltThermo],
     description:
-      "Slatted acoustic panels combining natural Nordic pine with a felt backing. Reduce echo and elevate any room with the warmth of real wood. Pre-finished and ready to install on walls or ceilings.",
+      "Slatted acoustic panels combining natural Nordic pine with a felt backing. Reduce echo and elevate any room with the warmth of real wood. Pre-finished and ready to install on walls or ceilings — perfect for offices, studios, restaurants and homes.",
     specs: [
-      { label: "Panel size", value: "600 × 2400 mm" },
+      { label: "Panel size", value: "4×2 ft – 6×3 ft" },
       { label: "Slat", value: "12 × 24 mm" },
       { label: "Backing", value: "PET acoustic felt, black" },
       { label: "NRC", value: "0.55" },
