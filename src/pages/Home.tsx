@@ -17,17 +17,17 @@ const Home = () => {
   return (
     <>
       {/* HERO — editorial split, dark premium nordic */}
-      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background min-h-screen flex flex-col">
-        <div className="container-wide relative flex-1 flex flex-col">
+      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background h-screen flex flex-col">
+        <div className="container-wide relative flex-1 flex flex-col min-h-0">
           {/* Top horizontal eyebrow */}
-          <div className="flex items-center gap-4 pt-8 md:pt-10 text-[10px] uppercase tracking-[0.32em] text-background/55 font-light">
+          <div className="flex items-center gap-4 pt-6 md:pt-10 text-[10px] uppercase tracking-[0.32em] text-background/55 font-light">
             <span className="h-px w-10 bg-background/30" />
             {t("home.hero.eyebrow")}
           </div>
 
-          <div className="grid lg:grid-cols-12 items-stretch flex-1">
+          <div className="grid lg:grid-cols-12 items-stretch flex-1 min-h-0">
             {/* LEFT — text column */}
-            <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-between py-12 md:py-16 lg:py-20 lg:pr-12">
+            <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-between py-6 md:py-12 lg:py-20 lg:pr-12 min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
                 <span>Riga · Latvia</span>
@@ -35,8 +35,8 @@ const Home = () => {
               </div>
 
               {/* headline */}
-              <div className="py-12 md:py-16 lg:py-0 animate-fade-up">
-                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
+              <div className="py-4 md:py-12 lg:py-0 animate-fade-up">
+                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Premium
                   <br />
                   CLT
@@ -45,7 +45,7 @@ const Home = () => {
                   Thermowood
                 </h1>
 
-                <p className="mt-8 md:mt-10 text-base md:text-lg text-background/65 font-light leading-relaxed max-w-md">
+                <p className="mt-4 md:mt-10 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
                   {t("home.hero.sub")}
                 </p>
               </div>
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
 
             {/* RIGHT — image column, bleeds to viewport edge on desktop */}
-            <div className="lg:col-span-6 xl:col-span-7 relative min-h-[65vw] sm:min-h-[55vw] lg:min-h-0 lg:my-12">
+            <div className="hidden lg:block lg:col-span-6 xl:col-span-7 relative lg:my-12">
               <div className="absolute inset-0 lg:left-0 lg:right-[calc(50%-50vw)]">
                 <img
                   src={heroImg}
