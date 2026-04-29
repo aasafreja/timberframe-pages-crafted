@@ -61,15 +61,35 @@ const Home = () => {
                 key={title}
                 className="group relative flex gap-5 border-t border-border pt-6 transition-colors hover:border-foreground/40"
               >
-                <div className="shrink-0">
-                  <div className="flex h-11 w-11 items-center justify-center bg-secondary/60 group-hover:bg-accent/15 transition-colors">
-                    <Icon className="text-foreground/80 group-hover:text-accent transition-colors" size={20} strokeWidth={1.4} />
-                  </div>
+                <div className="shrink-0 pt-0.5">
+                  <Icon className="text-foreground/70 group-hover:text-accent transition-colors" size={24} strokeWidth={1.3} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-base md:text-lg font-normal leading-snug">{title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed font-light">{text}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRUSTED BY */}
+      <section className="border-t border-border py-16 md:py-20">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <div className="eyebrow mb-3">{t("home.trusted.eyebrow")}</div>
+            <h2 className="text-2xl md:text-3xl font-normal text-foreground/80">
+              {t("home.trusted.title")}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
+            {["NORDHAUS", "BALTIC BUILD", "ARKTIK", "FORMA", "LIGNUM", "SKANDI CO"].map((logo) => (
+              <div
+                key={logo}
+                className="text-center text-sm md:text-base tracking-[0.25em] text-foreground/40 hover:text-foreground/70 transition-colors font-light"
+              >
+                {logo}
               </div>
             ))}
           </div>

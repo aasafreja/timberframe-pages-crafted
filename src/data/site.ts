@@ -30,6 +30,9 @@ export type Product = {
   gallery: string[];
   description: string;
   specs: { label: string; value: string }[];
+  capabilities?: string[];
+  process?: string[];
+  moq?: string;
 };
 
 export const products: Product[] = [
@@ -77,13 +80,30 @@ export const products: Product[] = [
     image: cltPanel2,
     gallery: [cltPanel2, projectInterior, projectOffice],
     description:
-      "Bespoke timber components for architects, designers and developers. From façade systems and ceilings to furniture-grade panels — we engineer, finish and ship to your project specification.",
+      "We manufacture non-standard sizes and specifications tailored to your project needs. Bespoke timber components for architects, designers and developers — from façade systems and ceilings to furniture-grade panels.",
     specs: [
-      { label: "MOQ", value: "no minimum" },
+      { label: "MOQ", value: "Contact us" },
       { label: "Lead time", value: "3 – 8 weeks" },
       { label: "CAD support", value: "DWG / IFC / Revit" },
       { label: "Delivery", value: "EU & UK, worldwide on request" },
     ],
+    capabilities: [
+      "Any custom size",
+      "Multiple wood types",
+      "Special finishes",
+      "Acoustic panels",
+      "Load-bearing specifications",
+      "Fire-rated options",
+      "Laminated designs",
+    ],
+    process: [
+      "Send us your drawings (PDF, CAD, images)",
+      "We analyze and provide recommendation",
+      "Quote with timeline",
+      "Production & quality control",
+      "Delivery",
+    ],
+    moq: "Contact us",
   },
 ];
 
