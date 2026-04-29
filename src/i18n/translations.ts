@@ -455,5 +455,33 @@ export const translations: Record<Lang, Dict> = {
     "contact.interested": "Mani interesē: {product}\n\n",
     "product.quotedNote":
       "Visi pasūtījumi tiek piedāvāti individuāli, atkarībā no apjoma, apdares un piegādes nosacījumiem.",
+
+    // Privacy
+    "privacy.eyebrow": "Juridiskā informācija",
+    "privacy.title": "Privātuma politika",
+    "privacy.desc":
+      "Kā mēs ievācam, izmantojam un aizsargājam informāciju, sazinoties ar Timber Smart Solution.",
+    "privacy.updated": "Pēdējoreiz atjaunināts: 2026. gada aprīlis",
+    "privacy.s1.title": "1. Informācija, ko ievācam",
+    "privacy.s1.text":
+      "Mēs ievācam informāciju, ko jūs sniedzat tieši — vārdu, uzņēmumu, e-pastu, tālruņa numuru un projekta detaļas, ko nododat ar kontaktu formām vai e-pastu.",
+    "privacy.s2.title": "2. Kā izmantojam informāciju",
+    "privacy.s2.text":
+      "Informāciju izmantojam, lai atbildētu uz jautājumiem, sagatavotu piedāvājumus, piegādātu produktus un informētu jūs par projekta gaitu. Mēs nepārdodam un neiznomājam personas datus trešajām pusēm.",
+    "privacy.s3.title": "3. Datu kopīgošana",
+    "privacy.s3.text":
+      "Datus varam dalīt ar uzticamiem partneriem (loģistika, sertificēti ražošanas partneri, maksājumu pakalpojumu sniedzēji) tikai jūsu pasūtījuma izpildei. Visi partneri ir saistīti ar konfidencialitātes un datu aizsardzības saistībām.",
+    "privacy.s4.title": "4. Datu glabāšana",
+    "privacy.s4.text":
+      "Projektu un kontaktu ierakstus glabājam tik ilgi, cik nepieciešams pakalpojumu sniegšanai un atbilstoši ES un Latvijas juridiskajām, nodokļu un grāmatvedības prasībām.",
+    "privacy.s5.title": "5. Jūsu tiesības",
+    "privacy.s5.text":
+      "Saskaņā ar GDPR jums ir tiesības piekļūt saviem personas datiem, tos labot vai dzēst, kā arī iebilst pret atsevišķu apstrādi. Lai izmantotu šīs tiesības, sazinieties ar mums e-pastā zemāk.",
+    "privacy.s6.title": "6. Sīkdatnes",
+    "privacy.s6.text":
+      "Mūsu vietne izmanto nepieciešamās sīkdatnes pareizai darbībai un var izmantot analītikas sīkdatnes uzlabojumiem. Jūs varat atspējot neobligātās sīkdatnes pārlūka iestatījumos.",
+    "privacy.s7.title": "7. Kontakti",
+    "privacy.s7.text":
+      "Jautājumi par šo politiku vai jūsu datiem? Sazinieties:",
   },
 };
