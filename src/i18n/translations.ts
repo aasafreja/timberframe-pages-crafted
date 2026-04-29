@@ -277,8 +277,6 @@ export const translations: Record<Lang, Dict> = {
       "Strādājiet tieši ar mūsu komandu — bez starpniekiem, caurspīdīgi nosacījumi, ilgtermiņa partnerība.",
     "home.products.eyebrow": "Mūsu produkti",
     "home.products.title": "Trīs veidi, kā ienest īstu koku jūsu projektā.",
-    "home.products.eyebrow": "Mūsu produkti",
-    "home.products.title": "Četri veidi, kā ienest īstu koku jūsu projektā.",
     "home.portfolio.eyebrow": "Atlasītie darbi",
     "home.portfolio.title": "Ēkas, kas elpo koku.",
     "home.portfolio.text":
