@@ -91,7 +91,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
               <Link
                 key={p.slug}
