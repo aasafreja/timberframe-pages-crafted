@@ -64,7 +64,7 @@ export const translations: Record<Lang, Dict> = {
     "home.adv.5.text":
       "Work directly with our team — no middlemen, transparent terms, long-term partnership.",
     "home.products.eyebrow": "Our products",
-    "home.products.title": "Four ways to bring real wood into your project.",
+    "home.products.title": "Three ways to bring real wood into your project.",
     "home.portfolio.eyebrow": "Selected work",
     "home.portfolio.title": "Buildings that breathe wood.",
     "home.portfolio.text":
