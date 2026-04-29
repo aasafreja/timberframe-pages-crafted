@@ -3,13 +3,35 @@ import { useSearchParams } from "react-router-dom";
 import { Mail, MapPin, Phone, Clock, Send, CheckCircle2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import contactHero from "@/assets/project-cabin.jpg";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { company } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
+
+type FieldLineProps = {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+  required?: boolean;
+};
+
+const FieldLine = ({ id, label, value, onChange, type = "text", required }: FieldLineProps) => (
+  <div className="space-y-3">
+    <label htmlFor={id} className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
+      {label}{required && <span className="text-accent ml-1">*</span>}
+    </label>
+    <input
+      id={id}
+      type={type}
+      required={required}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      className="w-full bg-transparent border-0 border-b border-foreground/20 focus:border-foreground focus:ring-0 outline-none px-0 py-2 text-base font-light transition-colors"
+    />
+  </div>
+);
+
 
 const Contact = () => {
   const { t } = useI18n();
