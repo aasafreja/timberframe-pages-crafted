@@ -40,8 +40,8 @@ const Home = () => {
                 {t("common.exploreProducts")}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link to="/portfolio" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
-                {t("common.viewPortfolio")}
+              <Link to="/contact" className="text-background/70 text-sm tracking-wide hover:text-background transition-colors">
+                {t("nav.quote")}
               </Link>
             </div>
           </div>
