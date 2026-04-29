@@ -126,60 +126,74 @@ const Contact = () => {
               </div>
             </aside>
 
-            {/* RIGHT — form */}
+            {/* RIGHT — form card */}
             <div className="lg:col-span-7 xl:col-span-8">
-              {sent ? (
-                <div className="border-t border-foreground/20 pt-16 space-y-6 animate-fade-up">
-                  <CheckCircle2 className="text-accent" size={32} strokeWidth={1.3} />
-                  <h2 className="font-display text-3xl md:text-4xl font-medium tracking-[-0.02em]">{t("contact.thanks.title")}</h2>
-                  <p className="text-muted-foreground font-light max-w-md">{t("contact.thanks.text")}</p>
-                  <button
-                    onClick={() => setSent(false)}
-                    className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors mt-4"
-                  >
-                    {t("contact.thanks.again")}
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={onSubmit} className="space-y-10">
-                  <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground font-light flex items-center gap-3">
-                    <span className="h-px w-8 bg-foreground/30" />
-                    {t("common.send")}
-                  </div>
+              <div className="relative bg-secondary/50 border border-border p-8 md:p-12 lg:p-14 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)]">
+                {/* corner ticks */}
+                <span className="absolute top-0 left-0 w-6 h-px bg-foreground" />
+                <span className="absolute top-0 left-0 w-px h-6 bg-foreground" />
+                <span className="absolute bottom-0 right-0 w-6 h-px bg-foreground" />
+                <span className="absolute bottom-0 right-0 w-px h-6 bg-foreground" />
 
-                  <div className="grid gap-10 sm:grid-cols-2">
-                    <FieldLine id="firstName" label={t("contact.form.firstName")} value={form.firstName} onChange={(v) => setForm({ ...form, firstName: v })} required />
-                    <FieldLine id="lastName" label={t("contact.form.lastName")} value={form.lastName} onChange={(v) => setForm({ ...form, lastName: v })} required />
-                    <FieldLine id="email" type="email" label={t("contact.form.email")} value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
-                    <FieldLine id="company" label={t("contact.form.company")} value={form.company} onChange={(v) => setForm({ ...form, company: v })} />
-                  </div>
-
-                  <div className="space-y-3">
-                    <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
-                      {t("contact.form.message")}
-                    </label>
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      placeholder={t("contact.form.placeholder")}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full bg-transparent border-0 border-b border-foreground/20 focus:border-foreground focus:ring-0 outline-none px-0 py-3 text-base font-light placeholder:text-muted-foreground/50 resize-none transition-colors"
-                    />
-                  </div>
-
-                  <div className="pt-4">
+                {sent ? (
+                  <div className="space-y-6 animate-fade-up py-8">
+                    <CheckCircle2 className="text-accent" size={36} strokeWidth={1.3} />
+                    <h2 className="font-display text-3xl md:text-4xl font-medium tracking-[-0.02em]">{t("contact.thanks.title")}</h2>
+                    <p className="text-muted-foreground font-light max-w-md">{t("contact.thanks.text")}</p>
                     <button
-                      type="submit"
-                      className="group inline-flex items-center gap-4 text-sm tracking-[0.18em] uppercase border-b border-foreground pb-2 hover:gap-6 transition-all"
+                      onClick={() => setSent(false)}
+                      className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors mt-4"
                     >
-                      {t("common.send")}
-                      <Send size={14} strokeWidth={1.4} className="transition-transform group-hover:translate-x-1" />
+                      {t("contact.thanks.again")}
                     </button>
                   </div>
-                </form>
-              )}
+                ) : (
+                  <form onSubmit={onSubmit} className="space-y-10">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground font-light flex items-center gap-3">
+                        <span className="h-px w-8 bg-foreground/40" />
+                        {t("common.send")}
+                      </div>
+                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Reply · 24h</span>
+                    </div>
+
+                    <div className="grid gap-10 sm:grid-cols-2">
+                      <FieldLine id="firstName" label={t("contact.form.firstName")} value={form.firstName} onChange={(v) => setForm({ ...form, firstName: v })} required />
+                      <FieldLine id="lastName" label={t("contact.form.lastName")} value={form.lastName} onChange={(v) => setForm({ ...form, lastName: v })} required />
+                      <FieldLine id="email" type="email" label={t("contact.form.email")} value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
+                      <FieldLine id="company" label={t("contact.form.company")} value={form.company} onChange={(v) => setForm({ ...form, company: v })} />
+                    </div>
+
+                    <div className="space-y-3">
+                      <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
+                        {t("contact.form.message")}<span className="text-accent ml-1">*</span>
+                      </label>
+                      <textarea
+                        id="message"
+                        required
+                        rows={5}
+                        placeholder={t("contact.form.placeholder")}
+                        value={form.message}
+                        onChange={(e) => setForm({ ...form, message: e.target.value })}
+                        className="w-full bg-transparent border-0 border-b border-foreground/30 focus:border-foreground focus:ring-0 outline-none px-0 py-3 text-base font-light placeholder:text-muted-foreground/50 resize-none transition-colors"
+                      />
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap items-center gap-6 justify-between">
+                      <p className="text-xs text-muted-foreground font-light max-w-xs">
+                        {t("contact.thanks.text")}
+                      </p>
+                      <button
+                        type="submit"
+                        className="group inline-flex items-center gap-4 bg-foreground text-background px-8 py-4 text-xs tracking-[0.22em] uppercase hover:bg-accent hover:text-accent-foreground transition-colors"
+                      >
+                        {t("common.send")}
+                        <Send size={14} strokeWidth={1.6} className="transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </div>
