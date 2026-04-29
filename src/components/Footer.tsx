@@ -16,16 +16,16 @@ export const Footer = () => {
   ];
 
   const LEGAL_LINKS: [string, string][] = [
-    [t("footer.legal.privacy"), "#"],
+    [t("footer.legal.privacy"), "/privacy"],
     [t("footer.legal.terms"), "#"],
     [t("footer.legal.shipping"), "#"],
     [t("footer.legal.refund"), "#"],
   ];
 
-  const SOCIALS: [string, string][] = [
-    ["Instagram", "#"],
-    ["LinkedIn", "#"],
-    ["Facebook", "#"],
+  const SOCIALS: { label: string; href: string; Icon: typeof Instagram }[] = [
+    { label: "Instagram", href: "#", Icon: Instagram },
+    { label: "LinkedIn", href: "#", Icon: Linkedin },
+    { label: "Facebook", href: "#", Icon: Facebook },
   ];
 
   return (
