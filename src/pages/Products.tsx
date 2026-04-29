@@ -7,60 +7,80 @@ import heroImg from "@/assets/products/clt-panel-2.jpeg";
 const Products = () => {
   const { t } = useI18n();
 
-  const bullets = ["FSC / PEFC certified", "Custom solutions", "Fast delivery"];
+  const meta = ["FSC / PEFC certified", "Custom solutions", "Fast delivery"];
 
   return (
     <>
-      {/* MINIMAL SPLIT HERO */}
-      <section className="relative -mt-16 md:-mt-20 grid grid-cols-1 lg:grid-cols-2 lg:min-h-[82vh] border-b border-border">
-        {/* LEFT — content */}
-        <div className="bg-background flex items-center pt-28 md:pt-32 pb-16 lg:py-0 order-2 lg:order-1">
-          <div className="w-full max-w-xl mx-auto px-6 md:px-10 lg:px-16 xl:px-20 lg:py-24">
-            <div className="eyebrow mb-8">Timber Smart Solutions</div>
+      {/* HERO — full-bleed, cinematic */}
+      <section className="relative min-h-[92vh] flex items-end overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 border-b border-border">
+        <img
+          src={heroImg}
+          alt="Premium CLT and thermowood panels stacked in workshop"
+          className="absolute inset-0 h-full w-full object-cover"
+          width={1920}
+          height={1280}
+          loading="eager"
+        />
+        {/* Cinematic gradient: dark bottom for legibility, transparent top */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"
+          aria-hidden
+        />
 
-            <h1 className="text-foreground leading-[1.04] text-5xl md:text-6xl lg:text-[4.25rem] font-light tracking-[-0.035em]">
+        <div className="container-wide relative z-10 pb-16 md:pb-24 text-background">
+          <div className="max-w-3xl animate-fade-up">
+            <div className="eyebrow text-background/70 mb-6">
+              Catalogue · Timber Smart Solutions
+            </div>
+
+            <h1 className="text-background leading-[1.02] tracking-[-0.04em] font-light text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
               Premium CLT
               <br />
               &amp; Thermowood
             </h1>
 
-            <p className="mt-8 text-base md:text-lg text-muted-foreground font-light max-w-md">
-              From the Baltic to Europe — engineered timber for considered architecture.
+            <p className="mt-8 text-base md:text-lg text-background/80 font-light max-w-xl leading-relaxed">
+              Engineered timber from the Baltic, delivered across Europe. A focused range of
+              cross-laminated panels, thermowood cladding and acoustic systems — built to spec.
             </p>
 
-            <ul className="mt-12 space-y-3 max-w-sm">
-              {bullets.map((b) => (
-                <li
-                  key={b}
-                  className="flex items-center justify-between gap-6 border-b border-border pb-3 text-sm text-foreground/80 font-light"
-                >
-                  <span>{b}</span>
-                  <span className="h-px w-6 bg-foreground/30" aria-hidden />
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              to="/contact"
-              className="mt-12 inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors"
-            >
-              Request a quote
-              <ArrowRight size={15} strokeWidth={1.4} />
-            </Link>
+            <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-6">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/60 pb-1.5 hover:border-background transition-colors"
+              >
+                Request a quote
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+              <a
+                href="#catalogue"
+                className="text-background/70 text-sm tracking-wide hover:text-background transition-colors"
+              >
+                View catalogue
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* RIGHT — image */}
-        <div className="relative min-h-[60vw] lg:min-h-0 overflow-hidden order-1 lg:order-2">
-          <img
-            src={heroImg}
-            alt="Close-up of premium CLT and thermowood panels"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-foreground/10" aria-hidden />
+        {/* Meta strip */}
+        <div className="absolute bottom-0 inset-x-0 z-10 border-t border-background/15 bg-background/[0.04] backdrop-blur-[2px]">
+          <div className="container-wide grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-background/15 text-background/85">
+            {meta.map((m) => (
+              <div
+                key={m}
+                className="py-4 sm:py-5 text-[11px] md:text-xs uppercase tracking-[0.22em] font-light text-center sm:first:text-left sm:last:text-right"
+              >
+                {m}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      <span id="catalogue" />
 
       <section className="py-16 md:py-24">
         <div className="container-wide grid gap-x-10 gap-y-16 md:grid-cols-2">
