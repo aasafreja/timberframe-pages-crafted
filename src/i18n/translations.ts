@@ -259,16 +259,24 @@ export const translations: Record<Lang, Dict> = {
     "home.hero.sub":
       "Krustām līmēta koksne (CLT) un Thermowood — projektēti Baltijā ilgmūžīgai un ķīmiski tīrai būvniecībai.",
     "home.adv.eyebrow": "Kāpēc Timber Smart",
-    "home.adv.title": "Koks, kas darbojas tikpat skaisti, cik ilgi kalpo.",
-    "home.adv.1.title": "Bez ķīmijas",
+    "home.adv.title": "Kvalitatīvi izgatavots. Ātri piegādāts. Cena, kas der biznesam.",
+    "home.adv.1.title": "ISO un FSC sertificēta ražošana",
     "home.adv.1.text":
-      "Apstrādāts tikai ar siltumu un tvaiku — droši cilvēkiem un saudzīgi videi.",
-    "home.adv.2.title": "Veidots ilgmūžībai",
+      "Neatkarīgi auditēta kvalitāte un izsekojamība no ilgtspējīgi apsaimniekotiem mežiem.",
+    "home.adv.2.title": "Pielāgots dizains un specifikācijas",
     "home.adv.2.text":
-      "Izmēru stabilitāte, izturība pret puvi un kukaiņiem, 30+ gadu kalpošanas laiks.",
-    "home.adv.3.title": "Arhitektu klase",
+      "Īpaša ģeometrija, profili un apdare, izstrādāti pēc jūsu projekta rasējumiem.",
+    "home.adv.3.title": "Ātrs izpildes laiks (2–4 nedēļas)",
     "home.adv.3.text":
-      "Pielāgota ģeometrija, apdare un CAD specifikācijas vērienīgiem projektiem.",
+      "Paredzami termiņi standarta produktiem — vairums pasūtījumu tiek nosūtīti 4 nedēļās.",
+    "home.adv.4.title": "Konkurētspējīga cena lieliem pasūtījumiem",
+    "home.adv.4.text":
+      "Apjomam pielāgotas cenas attīstītājiem, būvniekiem un vairumtirgotājiem.",
+    "home.adv.5.title": "Tieša B2B sadarbība",
+    "home.adv.5.text":
+      "Strādājiet tieši ar mūsu komandu — bez starpniekiem, caurspīdīgi nosacījumi, ilgtermiņa partnerība.",
+    "home.products.eyebrow": "Mūsu produkti",
+    "home.products.title": "Trīs veidi, kā ienest īstu koku jūsu projektā.",
     "home.products.eyebrow": "Mūsu produkti",
     "home.products.title": "Četri veidi, kā ienest īstu koku jūsu projektā.",
     "home.portfolio.eyebrow": "Atlasītie darbi",
