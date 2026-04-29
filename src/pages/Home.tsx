@@ -61,10 +61,8 @@ const Home = () => {
                 key={title}
                 className="group relative flex gap-5 border-t border-border pt-6 transition-colors hover:border-foreground/40"
               >
-                <div className="shrink-0">
-                  <div className="flex h-11 w-11 items-center justify-center bg-secondary/60 group-hover:bg-accent/15 transition-colors">
-                    <Icon className="text-foreground/80 group-hover:text-accent transition-colors" size={20} strokeWidth={1.4} />
-                  </div>
+                <div className="shrink-0 pt-0.5">
+                  <Icon className="text-foreground/70 group-hover:text-accent transition-colors" size={24} strokeWidth={1.3} />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-base md:text-lg font-normal leading-snug">{title}</h3>
