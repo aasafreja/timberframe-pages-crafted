@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake } from "lucide-react";
+import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake, Home as HomeIcon, Layers, Blocks, Armchair } from "lucide-react";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
