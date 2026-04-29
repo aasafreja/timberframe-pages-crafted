@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { company } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
 
