@@ -83,18 +83,32 @@ export const Footer = () => {
             <h4 className="text-[11px] uppercase tracking-[0.22em] text-primary-foreground/40 mb-6">
               {t("footer.follow")}
             </h4>
-            <ul className="space-y-3 text-sm font-light">
-              {SOCIALS.map(([label, href]) => (
+            <ul className="space-y-3 text-sm font-light mb-6">
+              {SOCIALS.map(({ label, href, Icon }) => (
                 <li key={label}>
                   <a
                     href={href}
-                    className="text-primary-foreground/75 hover:text-primary-foreground transition-colors"
+                    aria-label={label}
+                    className="inline-flex items-center gap-3 text-primary-foreground/75 hover:text-primary-foreground transition-colors"
                   >
+                    <Icon size={16} strokeWidth={1.5} />
                     {label}
                   </a>
                 </li>
               ))}
             </ul>
+            <div className="flex items-center gap-3">
+              {SOCIALS.map(({ label, href, Icon }) => (
+                <a
+                  key={`icon-${label}`}
+                  href={href}
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center border border-primary-foreground/20 text-primary-foreground/75 hover:text-primary-foreground hover:border-primary-foreground/60 transition-colors"
+                >
+                  <Icon size={15} strokeWidth={1.5} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
