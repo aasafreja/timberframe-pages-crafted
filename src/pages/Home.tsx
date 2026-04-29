@@ -69,7 +69,7 @@ const Home = () => {
             </div>
 
             {/* RIGHT — image column, bleeds to viewport edge on desktop */}
-            <div className="hidden lg:block lg:col-span-6 xl:col-span-7 relative lg:my-12">
+            <div className="lg:col-span-6 xl:col-span-7 relative min-h-[40vh] lg:min-h-0 lg:my-12 -mx-6 md:-mx-10 lg:mx-0">
               <div className="absolute inset-0 lg:left-0 lg:right-[calc(50%-50vw)]">
                 <img
                   src={heroImg}
@@ -83,8 +83,8 @@ const Home = () => {
             </div>
           </div>
 
-          {/* bottom hairline meta-strip */}
-          <div className="border-t border-background/15">
+          {/* bottom hairline meta-strip — desktop only */}
+          <div className="hidden lg:block border-t border-background/15">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-background/15 text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
               {[
                 "FSC / PEFC certified",
