@@ -74,7 +74,52 @@ const Home = () => {
         </div>
       </section>
 
-      {/* TRUSTED BY */}
+      {/* PRODUCTION PROCESS */}
+      <section className="bg-secondary/40 border-y border-border py-20 md:py-28">
+        <div className="container-wide">
+          <div className="max-w-2xl mb-14">
+            <div className="eyebrow mb-4">{t("home.process.eyebrow")}</div>
+            <h2 className="text-3xl md:text-5xl font-normal leading-[1.1]">
+              {t("home.process.title")}
+            </h2>
+            <p className="mt-6 text-muted-foreground font-light leading-relaxed">
+              {t("home.process.desc")}
+            </p>
+          </div>
+
+          <ol className="grid gap-px bg-border grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-border">
+            {[1, 2, 3, 4].map((n, i) => (
+              <li
+                key={n}
+                className="bg-background p-8 md:p-10 group hover:bg-card transition-colors"
+              >
+                <div className="flex items-baseline gap-4 mb-5">
+                  <span className="font-display text-3xl md:text-4xl text-accent font-normal">
+                    {String(n).padStart(2, "0")}
+                  </span>
+                  <span className="h-px flex-1 bg-border group-hover:bg-foreground/30 transition-colors" />
+                </div>
+                <h3 className="text-lg md:text-xl font-normal mb-2">
+                  {t(`home.process.s${n}.title`)}
+                </h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                  {t(`home.process.s${n}.text`)}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-12">
+            <Link
+              to="/process"
+              className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors"
+            >
+              {t("home.process.cta")} <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="border-t border-border py-16 md:py-20">
         <div className="container-wide">
           <div className="text-center mb-12">
