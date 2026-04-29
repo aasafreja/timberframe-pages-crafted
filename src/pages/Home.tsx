@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Leaf, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake } from "lucide-react";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -7,9 +7,11 @@ import { useI18n } from "@/i18n/I18nProvider";
 const Home = () => {
   const { t } = useI18n();
   const advantages = [
-    { Icon: Leaf, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
-    { Icon: ShieldCheck, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
-    { Icon: Sparkles, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
+    { Icon: Award, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
+    { Icon: Settings2, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
+    { Icon: Clock, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
+    { Icon: Tag, title: t("home.adv.4.title"), text: t("home.adv.4.text") },
+    { Icon: Handshake, title: t("home.adv.5.title"), text: t("home.adv.5.text") },
   ];
 
   return (
