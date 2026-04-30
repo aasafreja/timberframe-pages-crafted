@@ -36,9 +36,13 @@ export const Header = () => {
 
   return (
     <header
-      className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-border transition-all"
+      className={`fixed top-0 inset-x-0 z-50 transition-all ${
+        transparent
+          ? "bg-transparent border-b border-transparent text-background"
+          : "bg-background/90 backdrop-blur-md border-b border-border text-foreground"
+      }`}
     >
-      <div className="container-wide flex h-16 md:h-20 items-center justify-between text-foreground">
+      <div className="container-wide flex h-16 md:h-20 items-center justify-between">
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -48,7 +52,13 @@ export const Header = () => {
               to={item.to}
               className={({ isActive }) =>
                 `text-[13px] font-normal tracking-wide transition-colors ${
-                  isActive ? "text-foreground" : "text-foreground/60 hover:text-foreground"
+                  transparent
+                    ? isActive
+                      ? "text-background"
+                      : "text-background/70 hover:text-background"
+                    : isActive
+                      ? "text-foreground"
+                      : "text-foreground/60 hover:text-foreground"
                 }`
               }
             >
@@ -59,10 +69,14 @@ export const Header = () => {
 
         <div className="hidden lg:flex items-center gap-6">
           <LanguageSwitcher />
-          <span className="h-4 w-px bg-border" aria-hidden />
+          <span className={`h-4 w-px ${transparent ? "bg-background/30" : "bg-border"}`} aria-hidden />
           <Link
             to="/contact"
-            className="text-sm font-medium border-b border-foreground/40 pb-0.5 hover:border-foreground transition-colors"
+            className={`text-sm font-medium border-b pb-0.5 transition-colors ${
+              transparent
+                ? "border-background/40 hover:border-background"
+                : "border-foreground/40 hover:border-foreground"
+            }`}
           >
             {t("nav.quote")}
           </Link>
