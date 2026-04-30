@@ -22,7 +22,7 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-12 items-stretch flex-1 min-h-0">
             {/* LEFT — text column */}
-            <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-between py-6 md:py-12 lg:py-20 lg:pr-12 min-h-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between py-4 md:py-8 lg:py-10 lg:pr-12 min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
                 <span>Riga · Latvia</span>
@@ -30,7 +30,7 @@ const Home = () => {
               </div>
 
               {/* headline */}
-              <div className="py-4 md:py-12 lg:py-0 animate-fade-up">
+              <div className="py-4 md:py-8 lg:py-0 animate-fade-up">
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Premium
                   <br />
@@ -40,13 +40,13 @@ const Home = () => {
                   Thermowood
                 </h1>
 
-                <p className="mt-4 md:mt-10 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
+                <p className="mt-4 md:mt-8 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
                   {t("home.hero.sub")}
                 </p>
               </div>
 
               {/* bottom row — CTAs */}
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-5 mt-10 md:mt-14">
                 <Link
                   to="/contact"
                   className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1.5 hover:border-background transition-colors"
@@ -64,7 +64,7 @@ const Home = () => {
             </div>
 
             {/* RIGHT — image column, bleeds to viewport edge on desktop */}
-            <div className="lg:col-span-6 xl:col-span-7 relative min-h-[40vh] lg:min-h-0 lg:my-12 -mx-6 md:-mx-10 lg:mx-0">
+            <div className="lg:col-span-7 xl:col-span-7 relative min-h-[40vh] lg:min-h-0 lg:my-4 -mx-6 md:-mx-10 lg:mx-0">
               <div className="absolute inset-0 lg:left-0 lg:right-[calc(50%-50vw)]">
                 <img
                   src={heroImg}
@@ -76,6 +76,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-foreground/40 via-transparent to-transparent" />
               </div>
             </div>
+          </div>
           </div>
 
           {/* bottom hairline meta-strip — desktop only */}
