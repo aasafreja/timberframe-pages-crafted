@@ -17,12 +17,12 @@ const Home = () => {
   return (
     <>
       {/* HERO — editorial split, dark premium nordic */}
-      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background h-screen flex flex-col">
-        <div className="container-wide relative flex-1 flex flex-col min-h-0">
+      <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background lg:h-screen flex flex-col">
+        <div className="container-wide relative flex-1 flex flex-col lg:min-h-0">
 
-          <div className="grid lg:grid-cols-12 items-stretch flex-1 min-h-0">
+          <div className="grid lg:grid-cols-12 items-stretch flex-1 lg:min-h-0">
             {/* LEFT — text column */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between py-4 md:py-8 lg:pt-10 lg:pb-20 lg:pr-12 min-h-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col lg:justify-between pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14 lg:pr-12 lg:min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
                 <span>Riga · Latvia</span>
@@ -30,8 +30,8 @@ const Home = () => {
               </div>
 
               {/* headline */}
-              <div className="py-4 md:py-8 lg:py-0 animate-fade-up">
-                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
+              <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:py-0 animate-fade-up">
+                <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Premium
                   <br />
                   CLT
@@ -46,7 +46,7 @@ const Home = () => {
               </div>
 
               {/* bottom row — CTAs */}
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-5 mt-10 md:mt-14">
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-5 lg:mt-10">
                 <Link
                   to="/contact"
                   className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1.5 hover:border-background transition-colors"
@@ -64,7 +64,7 @@ const Home = () => {
             </div>
 
             {/* RIGHT — image column, bleeds to viewport edge on desktop */}
-            <div className="lg:col-span-7 xl:col-span-7 relative min-h-[40vh] lg:min-h-0 lg:my-4 -mx-6 md:-mx-10 lg:mx-0">
+            <div className="lg:col-span-7 xl:col-span-7 relative h-[55vh] lg:h-auto lg:min-h-0 lg:my-4 -mx-6 md:-mx-10 lg:mx-0">
               <div className="absolute inset-0 lg:left-0 lg:right-[calc(50%-50vw)]">
                 <img
                   src={heroImg}
