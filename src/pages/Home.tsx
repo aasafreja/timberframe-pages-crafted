@@ -77,7 +77,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          </div>
+
 
           {/* bottom hairline meta-strip — desktop only */}
           <div className="hidden lg:block border-t border-background/15">
