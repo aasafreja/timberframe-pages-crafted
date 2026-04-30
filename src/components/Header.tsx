@@ -13,6 +13,9 @@ export const Header = () => {
   const { pathname } = useLocation();
   const { t } = useI18n();
 
+  const isHome = pathname === "/";
+  const transparent = isHome && !scrolled && !open;
+
   const NAV = [
     { to: "/products", label: t("nav.products") },
     { to: "/process", label: t("nav.process") },
