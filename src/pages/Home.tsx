@@ -22,7 +22,7 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-12 items-stretch flex-1 min-h-0">
             {/* LEFT — text column */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between py-4 md:py-8 lg:py-10 lg:pr-12 min-h-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-between py-4 md:py-8 lg:pt-10 lg:pb-20 lg:pr-12 min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
                 <span>Riga · Latvia</span>
