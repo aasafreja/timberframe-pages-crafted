@@ -19,11 +19,6 @@ const Home = () => {
       {/* HERO — editorial split, dark premium nordic */}
       <section className="relative overflow-hidden -mt-16 md:-mt-20 pt-16 md:pt-20 bg-foreground text-background h-screen flex flex-col">
         <div className="container-wide relative flex-1 flex flex-col min-h-0">
-          {/* Top horizontal eyebrow */}
-          <div className="flex items-center gap-4 pt-6 md:pt-10 text-[10px] uppercase tracking-[0.32em] text-background/55 font-light">
-            <span className="h-px w-10 bg-background/30" />
-            {t("home.hero.eyebrow")}
-          </div>
 
           <div className="grid lg:grid-cols-12 items-stretch flex-1 min-h-0">
             {/* LEFT — text column */}
