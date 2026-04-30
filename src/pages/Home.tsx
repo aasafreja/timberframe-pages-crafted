@@ -22,7 +22,7 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-12 items-stretch flex-1 lg:min-h-0">
             {/* LEFT — text column */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col lg:justify-between pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14 lg:pr-12 lg:min-h-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14 lg:pr-12 lg:min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
                 <span>Riga · Latvia</span>
@@ -46,7 +46,7 @@ const Home = () => {
               </div>
 
               {/* bottom row — CTAs */}
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-5 lg:mt-10">
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-5 mt-8 md:mt-10 lg:mt-12">
                 <Link
                   to="/contact"
                   className="group inline-flex items-center gap-3 text-background text-sm tracking-wide border-b border-background/50 pb-1.5 hover:border-background transition-colors"
