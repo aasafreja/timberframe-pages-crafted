@@ -23,7 +23,8 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 
   const t = useCallback(
     (key: string, vars?: Record<string, string | number>) => {
-      const dict = translations[lang];
+      // Display content is Latvian-only regardless of switcher selection
+      const dict = translations.lv;
       let str = dict[key] ?? translations.en[key] ?? key;
       if (vars) {
         for (const [k, v] of Object.entries(vars)) {

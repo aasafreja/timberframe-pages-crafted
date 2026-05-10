@@ -14,28 +14,28 @@ type Reference = {
 
 const REFERENCES: Reference[] = [
   {
-    title: "Stockholm Office Complex",
-    country: "Sweden",
+    title: "Stokholmas biroju komplekss",
+    country: "Zviedrija",
     year: "2024",
     area: "500 m²",
-    materials: "CLT panels",
-    partner: { role: "Architect", name: "[Name]" },
+    materials: "CLT paneļi",
+    partner: { role: "Arhitekts", name: "[Vārds]" },
   },
   {
-    title: "Berlin Residential",
-    country: "Germany",
+    title: "Berlīnes dzīvojamā ēka",
+    country: "Vācija",
     year: "2024",
     area: "1200 m²",
-    materials: "CLT + Thermowood",
-    partner: { role: "Architect", name: "[Name]" },
+    materials: "CLT + termokoks",
+    partner: { role: "Arhitekts", name: "[Vārds]" },
   },
   {
-    title: "Helsinki Industrial",
-    country: "Finland",
+    title: "Helsinku rūpniecības objekts",
+    country: "Somija",
     year: "2023",
     area: "800 m²",
-    materials: "Custom panels",
-    partner: { role: "Contractor", name: "[Name]" },
+    materials: "Pielāgoti paneļi",
+    partner: { role: "Būvuzņēmējs", name: "[Vārds]" },
   },
 ];
 
@@ -51,8 +51,8 @@ const Portfolio = () => {
         image={heroImg}
         overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        secondary={{ label: "View references", href: "#references" }}
-        meta={["Sweden · 2024", "Germany · 2024", "Finland · 2023"]}
+        secondary={{ label: "Skatīt atsauces", href: "#references" }}
+        meta={["Zviedrija · 2024", "Vācija · 2024", "Somija · 2023"]}
       />
 
       <section className="py-16 md:py-24">

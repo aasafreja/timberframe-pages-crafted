@@ -73,7 +73,7 @@ const Contact = () => {
         overlay="strong"
         cta={{ label: t("common.send"), to: "#form" }}
         secondary={{ label: "+371 2929 5353", href: "tel:+37129295353" }}
-        meta={["Riga, Latvia", "Mon – Fri · 09 – 18", "EN · LV · DE"]}
+        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "LV · EN · DE"]}
       />
 
       <section id="form" className="py-20 md:py-32 bg-background">
@@ -93,10 +93,10 @@ const Contact = () => {
 
               <ul className="space-y-8">
                 {[
-                  { Icon: MapPin, label: "Address", value: company.address },
-                  { Icon: Phone, label: "Phone", value: company.phones.join(" · ") },
-                  { Icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
-                  { Icon: Clock, label: "Hours", value: company.hours },
+                  { Icon: MapPin, label: "Adrese", value: company.address },
+                  { Icon: Phone, label: "Tālrunis", value: company.phones.join(" · ") },
+                  { Icon: Mail, label: "E-pasts", value: company.email, href: `mailto:${company.email}` },
+                  { Icon: Clock, label: "Darba laiks", value: company.hours },
                 ].map(({ Icon, label, value, href }) => (
                   <li key={label} className="group border-t border-border pt-5 flex items-start gap-5">
                     <Icon size={16} strokeWidth={1.4} className="text-foreground/50 mt-1 shrink-0 group-hover:text-accent transition-colors" />
@@ -154,7 +154,7 @@ const Contact = () => {
                         <span className="h-px w-8 bg-foreground/40" />
                         {t("common.send")}
                       </div>
-                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Reply · 24h</span>
+                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Atbilde · 24h</span>
                     </div>
 
                     <div className="grid gap-10 sm:grid-cols-2">

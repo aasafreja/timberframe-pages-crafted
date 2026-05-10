@@ -46,10 +46,10 @@ const About = () => {
   ];
 
   const certifications = [
-    "FSC / PEFC Certified",
+    "FSC / PEFC sertificēts",
     "ISO 9001:2015",
-    "CE Marked Products",
-    "Baltic Timber Industry Award (2023)",
+    "CE marķēti produkti",
+    "Baltijas koksnes nozares balva (2023)",
   ];
 
   return (
@@ -61,8 +61,8 @@ const About = () => {
         image={aboutHero}
         overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        secondary={{ label: "Our process", href: "/process" }}
-        meta={["Riga, Latvia", "Since 1999", "ISO 9001 · FSC"]}
+        secondary={{ label: "Mūsu process", href: "/process" }}
+        meta={["Rīga, Latvija", "Kopš 1999", "ISO 9001 · FSC"]}
       />
 
       <section className="py-16 md:py-20 border-b border-border">
@@ -141,8 +141,8 @@ const About = () => {
           </div>
           <div className="lg:col-span-7">
             <div className="bg-background border border-border p-8 md:p-10">
-              <div className="font-display text-2xl md:text-3xl">Elans Tomsevics</div>
-              <div className="text-sm text-muted-foreground mt-1">Technical Manager &amp; CEO</div>
+              <div className="font-display text-2xl md:text-3xl">Elans Tomševičs</div>
+              <div className="text-sm text-muted-foreground mt-1">Tehniskais vadītājs un CEO</div>
 
               <ul className="mt-8 space-y-3 text-sm font-light">
                 <li className="flex items-start gap-3 border-b border-border pb-3">

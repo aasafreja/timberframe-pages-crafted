@@ -25,19 +25,19 @@ const Home = () => {
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14 lg:pr-12 lg:min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
-                <span>Riga · Latvia</span>
-                <span className="hidden sm:inline">Est. 1999</span>
+                <span>Rīga · Latvija</span>
+                <span className="hidden sm:inline">Dib. 1999</span>
               </div>
 
               {/* headline */}
               <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:py-0 animate-fade-up">
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
-                  Premium
+                  Augstākās klases
                   <br />
                   CLT
                   <span className="text-background/40"> &amp; </span>
                   <br className="sm:hidden" />
-                  Thermowood
+                  termokoks
                 </h1>
 
                 <p className="mt-4 md:mt-8 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
@@ -83,10 +83,10 @@ const Home = () => {
           <div className="hidden lg:block border-t border-background/15">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-background/15 text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
               {[
-                "FSC / PEFC certified",
+                "FSC / PEFC sertificēts",
                 "ISO 9001 : 2015",
-                "200+ m² / day",
-                "Delivery across EU",
+                "200+ m² / dienā",
+                "Piegāde visā ES",
               ].map((m) => (
                 <div key={m} className="py-5 px-4 text-center">
                   {m}
@@ -128,26 +128,26 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid gap-12 lg:gap-16 lg:grid-cols-12 mb-16 md:mb-20">
             <div className="lg:col-span-5">
-              <div className="eyebrow mb-4">Material · 101</div>
+              <div className="eyebrow mb-4">Materiāls · 101</div>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-[-0.03em] font-medium">
-                What is CLT
+                Kas ir CLT
                 <br />
-                <span className="text-foreground/40">(Cross-Laminated Timber)?</span>
+                <span className="text-foreground/40">(krustām līmēta koksne)?</span>
               </h2>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
               <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-                CLT is a high-performance engineered wood product made from multiple layers of timber glued together perpendicularly. It serves as both a structural and finishing material in construction.
+                CLT ir augstas veiktspējas inženiertehnisks koka produkts, kas izgatavots no vairākām perpendikulāri salīmētām koka kārtām. Tas kalpo gan kā konstruktīvs, gan apdares materiāls būvniecībā.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
             {[
-              { Icon: HomeIcon, title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
-              { Icon: Layers, title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
-              { Icon: Blocks, title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
-              { Icon: Armchair, title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
+              { Icon: HomeIcon, title: "Dzīvojamās ēkas", text: "Pateicoties vieglai uzstādīšanai, CLT plaši izmanto Skandināvijas un Eiropas būvniecībā, īpaši ilgtspējīgos un energoefektīvos projektos." },
+              { Icon: Layers, title: "Iekštelpu apdare", text: "Tiek izmantots kā sienu un griestu paneļi, telpu sadalītāji un citi arhitektoniski elementi." },
+              { Icon: Blocks, title: "Moduļu un ātrās montāžas konstrukcijas", text: "Skandināvijas un Eiropas būvnieki novērtē inženiertehnisku koksni par tās izturību un dabīgo skaistumu." },
+              { Icon: Armchair, title: "Mēbeles", text: "Augstā nestspēja padara to ideāli piemērotu izturīgām mēbelēm — galdiem, plauktiem un gultu rāmjiem." },
             ].map((item, idx) => (
               <div
                 key={item.title}
