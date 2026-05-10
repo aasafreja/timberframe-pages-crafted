@@ -83,10 +83,10 @@ const Home = () => {
           <div className="hidden lg:block border-t border-background/15">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-background/15 text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
               {[
-                "FSC / PEFC certified",
+                "FSC / PEFC sertificēts",
                 "ISO 9001 : 2015",
-                "200+ m² / day",
-                "Delivery across EU",
+                "200+ m² / dienā",
+                "Piegāde visā ES",
               ].map((m) => (
                 <div key={m} className="py-5 px-4 text-center">
                   {m}
