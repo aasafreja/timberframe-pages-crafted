@@ -32,12 +32,12 @@ const Home = () => {
               {/* headline */}
               <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:py-0 animate-fade-up">
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
-                  Premium
+                  Augstākās klases
                   <br />
                   CLT
                   <span className="text-background/40"> &amp; </span>
                   <br className="sm:hidden" />
-                  Thermowood
+                  termokoks
                 </h1>
 
                 <p className="mt-4 md:mt-8 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
