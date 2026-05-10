@@ -36,8 +36,8 @@ const Process = () => {
         image={heroImg}
         overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        secondary={{ label: t("common.viewAll") ?? "View products", href: "/products" }}
-        meta={["Consultation", "Design & production", "Delivery across EU"]}
+        secondary={{ label: t("common.viewAll") ?? "Skatīt produktus", href: "/products" }}
+        meta={["Konsultācija", "Dizains un ražošana", "Piegāde visā ES"]}
       />
 
       <section className="py-20 md:py-28">
