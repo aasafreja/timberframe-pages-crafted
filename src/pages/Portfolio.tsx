@@ -51,8 +51,8 @@ const Portfolio = () => {
         image={heroImg}
         overlay="strong"
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        secondary={{ label: "View references", href: "#references" }}
-        meta={["Sweden · 2024", "Germany · 2024", "Finland · 2023"]}
+        secondary={{ label: "Skatīt atsauces", href: "#references" }}
+        meta={["Zviedrija · 2024", "Vācija · 2024", "Somija · 2023"]}
       />
 
       <section className="py-16 md:py-24">
