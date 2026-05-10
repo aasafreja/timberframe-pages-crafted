@@ -13,12 +13,12 @@ import thermowood from "@/assets/products/thermowood.jpeg";
 export const company = {
   name: "Timber Smart Solution",
   short: "TSS",
-  tagline: "Decorative Micro CLT Panels",
-  address: "Vienības gatve 20b, LV-1004, Riga, Latvia",
+  tagline: "Dekoratīvi mikro CLT paneļi",
+  address: "Vienības gatve 20b, LV-1004, Rīga, Latvija",
   phones: ["+371 2929 5353", "+371 2920 6808"],
   email: "timbersmartsolution@gmail.com",
-  hours: "Mon – Fri · 09:00 – 18:00",
-  ceo: "Elans Tomsevics — Technical Manager & CEO",
+  hours: "Pirmd. – Piektd. · 09:00 – 18:00",
+  ceo: "Elans Tomševičs — Tehniskais vadītājs un CEO",
 };
 
 export type Product = {
