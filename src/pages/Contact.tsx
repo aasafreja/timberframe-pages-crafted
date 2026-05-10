@@ -154,7 +154,7 @@ const Contact = () => {
                         <span className="h-px w-8 bg-foreground/40" />
                         {t("common.send")}
                       </div>
-                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Reply · 24h</span>
+                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Atbilde · 24h</span>
                     </div>
 
                     <div className="grid gap-10 sm:grid-cols-2">
