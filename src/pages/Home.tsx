@@ -25,8 +25,8 @@ const Home = () => {
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14 lg:pr-12 lg:min-h-0">
               {/* top meta */}
               <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
-                <span>Riga · Latvia</span>
-                <span className="hidden sm:inline">Est. 1999</span>
+                <span>Rīga · Latvija</span>
+                <span className="hidden sm:inline">Dib. 1999</span>
               </div>
 
               {/* headline */}
