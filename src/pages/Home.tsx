@@ -78,11 +78,10 @@ const Home = () => {
 
           {/* bottom hairline meta-strip — desktop only */}
           <div className="hidden lg:block border-t border-background/15">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-background/15 text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
+            <div className="grid grid-cols-2 divide-x divide-background/15 text-[11px] uppercase tracking-[0.22em] text-background/55 font-light">
               {[
-                "FSC / PEFC sertificēts",
-                "ISO 9001 : 2015",
-                "200+ m² / dienā",
+                "Piegāde visā ES",
+                "CE14080 sertifikācija",
                 "Piegāde visā ES",
               ].map((m) => (
                 <div key={m} className="py-5 px-4 text-center">
