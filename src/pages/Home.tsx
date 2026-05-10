@@ -34,10 +34,7 @@ const Home = () => {
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Tuvāk ceļš
                   <br />
-                  gatavai
-                  <span className="text-background/40"> / </span>
-                  <br className="sm:hidden" />
-                  savai mājai
+                  gatavai mājai
                 </h1>
 
                 <p className="mt-4 md:mt-8 text-base md:text-xl text-background/80 font-light leading-relaxed max-w-md">
