@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Award, Settings2, Clock, Tag, Handshake, Home as HomeIcon, Layers, Blocks, Armchair } from "lucide-react";
+import { ArrowRight, Check, Ruler, Clock, Leaf, Layers3, Globe2, Wrench, Home as HomeIcon, Blocks, Armchair } from "lucide-react";
 import { products, projects, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -7,11 +7,12 @@ import { useI18n } from "@/i18n/I18nProvider";
 const Home = () => {
   const { t } = useI18n();
   const advantages = [
-    { Icon: Award, title: t("home.adv.1.title"), text: t("home.adv.1.text") },
-    { Icon: Settings2, title: t("home.adv.2.title"), text: t("home.adv.2.text") },
-    { Icon: Clock, title: t("home.adv.3.title"), text: t("home.adv.3.text") },
-    { Icon: Tag, title: t("home.adv.4.title"), text: t("home.adv.4.text") },
-    { Icon: Handshake, title: t("home.adv.5.title"), text: t("home.adv.5.text") },
+    { Icon: Ruler, title: "Individuāla ražošana", text: "Katrs pasūtījums tiek ražots pēc jūsu specifikācijām — bez standarta izmēru ierobežojumiem un bez minimālā pasūtījuma apjoma." },
+    { Icon: Clock, title: "Divi piegādes termiņi", text: "Ātrais režīms — 2 nedēļas. Standarta — 2 mēneši. Abos gadījumos 50% avanss, starpība cenā aptuveni 15%. Izvēlieties, kas der jūsu grafikam." },
+    { Icon: Leaf, title: "Tīri, ekoloģiski materiāli", text: "Bez ķīmikālijām. Dabīgi izturīgi pret mitrumu, pelējumu un kukaiņiem — droši cilvēkiem un videi." },
+    { Icon: Layers3, title: "Konstrukcija un estētika vienlaikus", text: "CLT Mini un LVL paneļi kalpo gan kā nesošais elements, gan kā apdares risinājums — iekštelpās un ārā. Divi uzdevumi, viens materiāls." },
+    { Icon: Globe2, title: "Eksports uz ES un tālāk", text: "Mūsu flagmaņprodukts — LVL sijas ar dekoratīvo apvilkumu — tiek piegādāts arhitektiem un būvniekiem visā Eiropā." },
+    { Icon: Wrench, title: "Montāža bez raizēm", text: "Sadarbojamies ar uzticamiem montāžas partneriem, kas nodrošina profesionālu uzstādīšanu — no materiāla līdz gatavam rezultātam." },
   ];
 
   return (
