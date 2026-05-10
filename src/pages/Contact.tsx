@@ -73,7 +73,7 @@ const Contact = () => {
         overlay="strong"
         cta={{ label: t("common.send"), to: "#form" }}
         secondary={{ label: "+371 2929 5353", href: "tel:+37129295353" }}
-        meta={["Riga, Latvia", "Mon – Fri · 09 – 18", "EN · LV · DE"]}
+        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "LV · EN · DE"]}
       />
 
       <section id="form" className="py-20 md:py-32 bg-background">
