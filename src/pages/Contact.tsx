@@ -93,10 +93,10 @@ const Contact = () => {
 
               <ul className="space-y-8">
                 {[
-                  { Icon: MapPin, label: "Address", value: company.address },
-                  { Icon: Phone, label: "Phone", value: company.phones.join(" · ") },
-                  { Icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
-                  { Icon: Clock, label: "Hours", value: company.hours },
+                  { Icon: MapPin, label: "Adrese", value: company.address },
+                  { Icon: Phone, label: "Tālrunis", value: company.phones.join(" · ") },
+                  { Icon: Mail, label: "E-pasts", value: company.email, href: `mailto:${company.email}` },
+                  { Icon: Clock, label: "Darba laiks", value: company.hours },
                 ].map(({ Icon, label, value, href }) => (
                   <li key={label} className="group border-t border-border pt-5 flex items-start gap-5">
                     <Icon size={16} strokeWidth={1.4} className="text-foreground/50 mt-1 shrink-0 group-hover:text-accent transition-colors" />
