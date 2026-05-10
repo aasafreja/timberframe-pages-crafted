@@ -14,28 +14,28 @@ type Reference = {
 
 const REFERENCES: Reference[] = [
   {
-    title: "Stockholm Office Complex",
-    country: "Sweden",
+    title: "Stokholmas biroju komplekss",
+    country: "Zviedrija",
     year: "2024",
     area: "500 m²",
-    materials: "CLT panels",
-    partner: { role: "Architect", name: "[Name]" },
+    materials: "CLT paneļi",
+    partner: { role: "Arhitekts", name: "[Vārds]" },
   },
   {
-    title: "Berlin Residential",
-    country: "Germany",
+    title: "Berlīnes dzīvojamā ēka",
+    country: "Vācija",
     year: "2024",
     area: "1200 m²",
-    materials: "CLT + Thermowood",
-    partner: { role: "Architect", name: "[Name]" },
+    materials: "CLT + termokoks",
+    partner: { role: "Arhitekts", name: "[Vārds]" },
   },
   {
-    title: "Helsinki Industrial",
-    country: "Finland",
+    title: "Helsinku rūpniecības objekts",
+    country: "Somija",
     year: "2023",
     area: "800 m²",
-    materials: "Custom panels",
-    partner: { role: "Contractor", name: "[Name]" },
+    materials: "Pielāgoti paneļi",
+    partner: { role: "Būvuzņēmējs", name: "[Vārds]" },
   },
 ];
 
