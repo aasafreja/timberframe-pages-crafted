@@ -82,7 +82,6 @@ const Home = () => {
               {[
                 "Piegāde visā ES",
                 "CE14080 sertifikācija",
-                "Piegāde visā ES",
               ].map((m) => (
                 <div key={m} className="py-5 px-4 text-center">
                   {m}
