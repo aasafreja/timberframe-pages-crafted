@@ -6,37 +6,37 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/I18nProvider";
 
 const CLT_SPECS: [string, string][] = [
-  ["Layers", "3 / 5 / 7 layers, cross-laminated"],
-  ["Thickness", "20 – 100 mm"],
-  ["Width", "up to 1250 mm"],
-  ["Length", "up to 5000 mm"],
-  ["Wood species", "Nordic spruce / pine"],
-  ["Adhesive", "PUR, formaldehyde-free"],
-  ["Density", "470 kg/m³ (avg)"],
-  ["Fire class", "D-s2, d0"],
+  ["Slāņi", "3 / 5 / 7 slāņi, krustām līmēti"],
+  ["Biezums", "20 – 100 mm"],
+  ["Platums", "līdz 1250 mm"],
+  ["Garums", "līdz 5000 mm"],
+  ["Koka suga", "Ziemeļu egle / priede"],
+  ["Līme", "PUR, bez formaldehīda"],
+  ["Blīvums", "470 kg/m³ (vid.)"],
+  ["Ugunsdrošības klase", "D-s2, d0"],
 ];
 
 const THERMO_SPECS: [string, string][] = [
-  ["Treatment", "160 – 230 °C, oxygen-free"],
-  ["Thickness", "20 / 26 / 32 mm"],
-  ["Class", "Thermo-D (exterior)"],
-  ["Moisture content", "4 – 7 %"],
-  ["Thermal conductivity", "−25 % vs untreated"],
-  ["Service life", "30+ years"],
-  ["Chemicals", "none"],
-  ["Profiles", "vertical / horizontal cladding"],
+  ["Apstrāde", "160 – 230 °C, bez skābekļa"],
+  ["Biezums", "20 / 26 / 32 mm"],
+  ["Klase", "Thermo-D (āra)"],
+  ["Mitruma saturs", "4 – 7 %"],
+  ["Siltumvadītspēja", "−25 % pret neapstrādātu"],
+  ["Kalpošanas laiks", "30+ gadi"],
+  ["Ķīmija", "nav"],
+  ["Profili", "vertikāls / horizontāls apšuvums"],
 ];
 
 const COMPARE = [
-  ["Property", "CLT", "Thermowood", "Untreated pine"],
-  ["Dimensional stability", "High", "Very high", "Low"],
-  ["Moisture resistance", "Medium", "Very high", "Low"],
-  ["Service life (exterior)", "30 yrs+", "30 yrs+", "10 yrs"],
-  ["Chemical treatment", "None", "None", "Often required"],
-  ["Acoustic performance", "Good", "Good", "Average"],
+  ["Īpašība", "CLT", "Termokoks", "Neapstrādāta priede"],
+  ["Izmēru stabilitāte", "Augsta", "Ļoti augsta", "Zema"],
+  ["Mitruma izturība", "Vidēja", "Ļoti augsta", "Zema"],
+  ["Kalpošanas laiks (āra)", "30+ gadi", "30+ gadi", "10 gadi"],
+  ["Ķīmiskā apstrāde", "Nav", "Nav", "Bieži nepieciešama"],
+  ["Akustiskā veiktspēja", "Laba", "Laba", "Vidēja"],
 ];
 
-const CERTS = ["PEFC", "FSC", "CE marking", "EN 16351 (CLT)", "ThermoWood®"];
+const CERTS = ["PEFC", "FSC", "CE marķējums", "EN 16351 (CLT)", "ThermoWood®"];
 
 const Specs = () => {
   const { t } = useI18n();
@@ -48,8 +48,8 @@ const Specs = () => {
         description={t("specs.desc")}
         image={specsHero}
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        secondary={{ label: "Download datasheet", href: "#datasheets" }}
-        meta={["CLT panels", "Thermowood", "Acoustic systems"]}
+        secondary={{ label: "Lejupielādēt datu lapu", href: "#datasheets" }}
+        meta={["CLT paneļi", "Termokoks", "Akustiskās sistēmas"]}
       />
 
       <section className="py-16 md:py-20">
