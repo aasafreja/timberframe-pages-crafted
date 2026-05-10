@@ -30,7 +30,7 @@ const Home = () => {
               </div>
 
               {/* headline */}
-              <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:py-0 animate-fade-up">
+              <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:pt-12 xl:pt-20 lg:pb-0 animate-fade-up">
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
                   Tuvāk ceļš
                   <br />
