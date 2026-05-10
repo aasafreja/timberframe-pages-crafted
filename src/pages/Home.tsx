@@ -141,7 +141,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
             {[
               { Icon: HomeIcon, title: "Dzīvojamās ēkas", text: "Pateicoties vieglai uzstādīšanai, CLT plaši izmanto Skandināvijas un Eiropas būvniecībā, īpaši ilgtspējīgos un energoefektīvos projektos." },
-              { Icon: Layers, title: "Iekštelpu apdare", text: "Tiek izmantots kā sienu un griestu paneļi, telpu sadalītāji un citi arhitektoniski elementi." },
+              { Icon: Layers3, title: "Iekštelpu apdare", text: "Tiek izmantots kā sienu un griestu paneļi, telpu sadalītāji un citi arhitektoniski elementi." },
               { Icon: Blocks, title: "Moduļu un ātrās montāžas konstrukcijas", text: "Skandināvijas un Eiropas būvnieki novērtē inženiertehnisku koksni par tās izturību un dabīgo skaistumu." },
               { Icon: Armchair, title: "Mēbeles", text: "Augstā nestspēja padara to ideāli piemērotu izturīgām mēbelēm — galdiem, plauktiem un gultu rāmjiem." },
             ].map((item, idx) => (
