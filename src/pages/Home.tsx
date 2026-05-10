@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Ruler, Clock, Leaf, Layers3, Globe2, Wrench, Home as HomeIcon, Blocks, Armchair } from "lucide-react";
-import { products, projects, stats } from "@/data/site";
+import { products, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
 

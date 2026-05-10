@@ -9,7 +9,7 @@ export const Footer = () => {
   const NAV_LINKS: [string, string][] = [
     [t("nav.products"), "/products"],
     [t("nav.process"), "/process"],
-    [t("nav.portfolio"), "/portfolio"],
+    
     [t("nav.about"), "/about"],
     [t("nav.specs"), "/specs"],
     [t("nav.contact"), "/contact"],

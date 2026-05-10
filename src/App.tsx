@@ -9,8 +9,6 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Process from "./pages/Process";
-import Portfolio from "./pages/Portfolio";
-import ProjectDetail from "./pages/ProjectDetail";
 import About from "./pages/About";
 import Specs from "./pages/Specs";
 import Contact from "./pages/Contact";
@@ -32,8 +30,6 @@ const App = () => (
             <Route path="/products" element={<Products />} />
             <Route path="/products/:slug" element={<ProductDetail />} />
             <Route path="/process" element={<Process />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/:id" element={<ProjectDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/specs" element={<Specs />} />
             <Route path="/contact" element={<Contact />} />
