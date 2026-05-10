@@ -32,16 +32,20 @@ const Home = () => {
               {/* headline */}
               <div className="pt-6 pb-8 md:pt-8 md:pb-10 lg:py-0 animate-fade-up">
                 <h1 className="font-display text-background leading-[0.98] tracking-[-0.035em] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] font-medium">
-                  Augstākās klases
+                  Tuvāk ceļš
                   <br />
-                  CLT
-                  <span className="text-background/40"> &amp; </span>
+                  gatavai
+                  <span className="text-background/40"> / </span>
                   <br className="sm:hidden" />
-                  termokoks
+                  savai mājai
                 </h1>
 
-                <p className="mt-4 md:mt-8 text-sm md:text-lg text-background/65 font-light leading-relaxed max-w-md">
-                  {t("home.hero.sub")}
+                <p className="mt-4 md:mt-8 text-base md:text-xl text-background/80 font-light leading-relaxed max-w-md">
+                  LVL sijas, CLT Mini paneļi, akustiskās un dekoratīvās koka apdares — no ražošanas
+                </p>
+
+                <p className="mt-4 md:mt-6 text-sm md:text-base text-background/60 font-light leading-relaxed max-w-md">
+                  Timber Smart Solution ražo augstākās kvalitātes koka materiālus. Mēs sadarbojamies ar arhitektiem un būvniecības kompānijām. Mūsu produkti ir domāti gan iekštelpu apdares risinājumiem, gan konstrukciju elementiem — ar eksportu Eiropā un ārpus tās.
                 </p>
               </div>
 
