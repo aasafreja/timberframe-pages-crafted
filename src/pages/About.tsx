@@ -141,8 +141,8 @@ const About = () => {
           </div>
           <div className="lg:col-span-7">
             <div className="bg-background border border-border p-8 md:p-10">
-              <div className="font-display text-2xl md:text-3xl">Elans Tomsevics</div>
-              <div className="text-sm text-muted-foreground mt-1">Technical Manager &amp; CEO</div>
+              <div className="font-display text-2xl md:text-3xl">Elans Tomševičs</div>
+              <div className="text-sm text-muted-foreground mt-1">Tehniskais vadītājs un CEO</div>
 
               <ul className="mt-8 space-y-3 text-sm font-light">
                 <li className="flex items-start gap-3 border-b border-border pb-3">
