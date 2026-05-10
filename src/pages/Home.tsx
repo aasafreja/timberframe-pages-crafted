@@ -128,26 +128,26 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid gap-12 lg:gap-16 lg:grid-cols-12 mb-16 md:mb-20">
             <div className="lg:col-span-5">
-              <div className="eyebrow mb-4">Material · 101</div>
+              <div className="eyebrow mb-4">Materiāls · 101</div>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-[-0.03em] font-medium">
-                What is CLT
+                Kas ir CLT
                 <br />
-                <span className="text-foreground/40">(Cross-Laminated Timber)?</span>
+                <span className="text-foreground/40">(krustām līmēta koksne)?</span>
               </h2>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
               <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-                CLT is a high-performance engineered wood product made from multiple layers of timber glued together perpendicularly. It serves as both a structural and finishing material in construction.
+                CLT ir augstas veiktspējas inženiertehnisks koka produkts, kas izgatavots no vairākām perpendikulāri salīmētām koka kārtām. Tas kalpo gan kā konstruktīvs, gan apdares materiāls būvniecībā.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-border">
             {[
-              { Icon: HomeIcon, title: "Residential buildings", text: "Thanks to its ease of installation, CLT is widely used in Scandinavian and European construction, particularly in sustainable and energy-efficient projects." },
-              { Icon: Layers, title: "Interior finishes", text: "Used as wall and ceiling panels, room separators and other architectural elements." },
-              { Icon: Blocks, title: "Modular & rapid assembly structures", text: "Scandinavian and European builders favor engineered timber for its durability and natural beauty." },
-              { Icon: Armchair, title: "Furniture", text: "High load-bearing capacity makes it ideal for durable furniture like tables, shelves, and bed frames." },
+              { Icon: HomeIcon, title: "Dzīvojamās ēkas", text: "Pateicoties vieglai uzstādīšanai, CLT plaši izmanto Skandināvijas un Eiropas būvniecībā, īpaši ilgtspējīgos un energoefektīvos projektos." },
+              { Icon: Layers, title: "Iekštelpu apdare", text: "Tiek izmantots kā sienu un griestu paneļi, telpu sadalītāji un citi arhitektoniski elementi." },
+              { Icon: Blocks, title: "Moduļu un ātrās montāžas konstrukcijas", text: "Skandināvijas un Eiropas būvnieki novērtē inženiertehnisku koksni par tās izturību un dabīgo skaistumu." },
+              { Icon: Armchair, title: "Mēbeles", text: "Augstā nestspēja padara to ideāli piemērotu izturīgām mēbelēm — galdiem, plauktiem un gultu rāmjiem." },
             ].map((item, idx) => (
               <div
                 key={item.title}
