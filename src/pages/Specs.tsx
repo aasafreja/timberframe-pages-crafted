@@ -143,7 +143,7 @@ const Specs = () => {
             <ComingSoon label={t("specs.dl.soon")} />
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            {["CLT Panels — Pricing & Specs", "Thermowood — Technical Datasheet", "Acoustic Panels — Installation Guide", "Sustainability Report 2024"].map((d) => (
+            {["CLT paneļi — cenas un specifikācijas", "Termokoks — tehniskā datu lapa", "Akustiskie paneļi — uzstādīšanas pamācība", "Ilgtspējas pārskats 2024"].map((d) => (
               <div key={d} className="flex items-center justify-between gap-4 p-5 border border-border bg-card">
                 <div className="flex items-center gap-4">
                   <FileText className="text-accent" size={20} />
