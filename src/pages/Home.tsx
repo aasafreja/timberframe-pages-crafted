@@ -37,12 +37,8 @@ const Home = () => {
                   gatavai mājai
                 </h1>
 
-                <p className="mt-4 md:mt-8 text-base md:text-xl text-background/80 font-light leading-relaxed max-w-md">
-                  LVL sijas, CLT Mini paneļi, akustiskās un dekoratīvās koka apdares — no ražošanas
-                </p>
-
-                <p className="mt-4 md:mt-6 text-sm md:text-base text-background/60 font-light leading-relaxed max-w-md">
-                  Timber Smart Solution ražo augstākās kvalitātes koka materiālus. Mēs sadarbojamies ar arhitektiem un būvniecības kompānijām. Mūsu produkti ir domāti gan iekštelpu apdares risinājumiem, gan konstrukciju elementiem — ar eksportu Eiropā un ārpus tās.
+                <p className="mt-4 md:mt-8 text-base md:text-lg text-background/70 font-light leading-relaxed max-w-md">
+                  Timber Smart Solution nodrošina arhitektus un būvniecības uzņēmumus ar augstākās kvalitātes koka materiāliem — LVL, CLT Mini un koka apdari iekštelpām un konstrukcijām.
                 </p>
               </div>
 
