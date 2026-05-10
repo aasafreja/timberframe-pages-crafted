@@ -11,13 +11,13 @@ const Products = () => {
   return (
     <>
       <PageHeader
-        eyebrow="Catalogue · Timber Smart Solutions"
-        title={"Premium CLT\n& Thermowood"}
-        description="Engineered timber from the Baltic, delivered across Europe. A focused range of cross-laminated panels, thermowood cladding and acoustic systems — built to spec."
+        eyebrow="Katalogs · Timber Smart Solutions"
+        title={"Augstākās klases CLT\nun termokoks"}
+        description="Inženiertehniska koksne no Baltijas, piegādāta visā Eiropā. Mērķtiecīgs krustām līmētu paneļu, termokoka apšuvuma un akustisko sistēmu klāsts — izgatavots pēc specifikācijas."
         image={heroImg}
-        cta={{ label: "Request a quote", to: "/contact" }}
-        secondary={{ label: "View catalogue", href: "#catalogue" }}
-        meta={["FSC / PEFC certified", "Custom solutions", "Fast delivery"]}
+        cta={{ label: "Pieprasīt piedāvājumu", to: "/contact" }}
+        secondary={{ label: "Skatīt katalogu", href: "#catalogue" }}
+        meta={["FSC / PEFC sertificēts", "Pielāgoti risinājumi", "Ātra piegāde"]}
       />
 
       <span id="catalogue" />
