@@ -11,6 +11,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Process from "./pages/Process";
 import About from "./pages/About";
 import Specs from "./pages/Specs";
+import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
