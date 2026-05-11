@@ -14,11 +14,12 @@ type FieldLineProps = {
   onChange: (v: string) => void;
   type?: string;
   required?: boolean;
+  placeholder?: string;
 };
 
-const FieldLine = ({ id, label, value, onChange, type = "text", required }: FieldLineProps) => (
-  <div className="space-y-3">
-    <label htmlFor={id} className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
+const FieldLine = ({ id, label, value, onChange, type = "text", required, placeholder }: FieldLineProps) => (
+  <div className="space-y-2">
+    <label htmlFor={id} className="block text-xs font-medium text-foreground tracking-wide">
       {label}{required && <span className="text-accent ml-1">*</span>}
     </label>
     <input
@@ -27,7 +28,8 @@ const FieldLine = ({ id, label, value, onChange, type = "text", required }: Fiel
       required={required}
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full bg-transparent border-0 border-b border-foreground/20 focus:border-foreground focus:ring-0 outline-none px-0 py-2 text-base font-light transition-colors"
+      placeholder={placeholder}
+      className="w-full bg-background border border-border focus:border-foreground focus:ring-0 outline-none px-4 py-3 text-sm font-light placeholder:text-muted-foreground/60 transition-colors"
     />
   </div>
 );
@@ -43,8 +45,11 @@ const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     company: "",
+    subject: productParam ?? "",
     message: productParam ? t("contact.interested", { product: productParam }) : "",
+    consent: false,
   });
 
   useEffect(() => {
@@ -67,13 +72,13 @@ const Contact = () => {
     <>
       <PageHeader
         eyebrow={t("contact.eyebrow")}
-        title={t("contact.title")}
-        description={t("contact.desc")}
+        title="Sazinieties ar mums"
+        description="Vai jums ir projekts? Pastāstiet mums par to. Nosūtiet rasējumus, izmērus vai idejas — jebkurā formātā. Mēs sagatavosim individuālu piedāvājumu 24–48 stundu laikā."
         image={contactHero}
         overlay="strong"
         cta={{ label: t("common.send"), to: "#form" }}
         secondary={{ label: "+371 2929 5353", href: "tel:+37129295353" }}
-        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "LV · EN · DE"]}
+        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "Atbilde 24–48h"]}
       />
 
       <section id="form" className="py-20 md:py-32 bg-background">
@@ -128,71 +133,135 @@ const Contact = () => {
 
             {/* RIGHT — form card */}
             <div className="lg:col-span-7 xl:col-span-8">
-              <div className="relative bg-secondary/50 border border-border p-8 md:p-12 lg:p-14 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)]">
-                {/* corner ticks */}
-                <span className="absolute top-0 left-0 w-6 h-px bg-foreground" />
-                <span className="absolute top-0 left-0 w-px h-6 bg-foreground" />
-                <span className="absolute bottom-0 right-0 w-6 h-px bg-foreground" />
-                <span className="absolute bottom-0 right-0 w-px h-6 bg-foreground" />
-
-                {sent ? (
-                  <div className="space-y-6 animate-fade-up py-8">
-                    <CheckCircle2 className="text-accent" size={36} strokeWidth={1.3} />
-                    <h2 className="font-display text-3xl md:text-4xl font-medium tracking-[-0.02em]">{t("contact.thanks.title")}</h2>
-                    <p className="text-muted-foreground font-light max-w-md">{t("contact.thanks.text")}</p>
-                    <button
-                      onClick={() => setSent(false)}
-                      className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors mt-4"
-                    >
-                      {t("contact.thanks.again")}
-                    </button>
+              <div className="bg-background border border-border">
+                {/* Header strip */}
+                <div className="border-b border-border bg-secondary/40 px-8 md:px-12 py-6 flex items-center justify-between gap-4">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light mb-1">
+                      Pieprasījuma forma
+                    </div>
+                    <h3 className="font-display text-xl md:text-2xl font-medium tracking-[-0.01em]">
+                      Saņemt individuālu piedāvājumu
+                    </h3>
                   </div>
-                ) : (
-                  <form onSubmit={onSubmit} className="space-y-10">
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground font-light flex items-center gap-3">
-                        <span className="h-px w-8 bg-foreground/40" />
-                        {t("common.send")}
-                      </div>
-                      <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60 font-light">Atbilde · 24h</span>
-                    </div>
+                  <span className="hidden sm:inline-flex text-[10px] uppercase tracking-[0.22em] text-muted-foreground font-light px-3 py-1.5 border border-border">
+                    Atbilde 24–48h
+                  </span>
+                </div>
 
-                    <div className="grid gap-10 sm:grid-cols-2">
-                      <FieldLine id="firstName" label={t("contact.form.firstName")} value={form.firstName} onChange={(v) => setForm({ ...form, firstName: v })} required />
-                      <FieldLine id="lastName" label={t("contact.form.lastName")} value={form.lastName} onChange={(v) => setForm({ ...form, lastName: v })} required />
-                      <FieldLine id="email" type="email" label={t("contact.form.email")} value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
-                      <FieldLine id="company" label={t("contact.form.company")} value={form.company} onChange={(v) => setForm({ ...form, company: v })} />
-                    </div>
-
-                    <div className="space-y-3">
-                      <label htmlFor="message" className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
-                        {t("contact.form.message")}<span className="text-accent ml-1">*</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        required
-                        rows={5}
-                        placeholder={t("contact.form.placeholder")}
-                        value={form.message}
-                        onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        className="w-full bg-transparent border-0 border-b border-foreground/30 focus:border-foreground focus:ring-0 outline-none px-0 py-3 text-base font-light placeholder:text-muted-foreground/50 resize-none transition-colors"
-                      />
-                    </div>
-
-                    <div className="pt-2 flex flex-wrap items-center gap-6 justify-between">
-                      <p className="text-xs text-muted-foreground font-light max-w-xs">
-                        {t("contact.thanks.text")}
-                      </p>
+                <div className="p-8 md:p-12">
+                  {sent ? (
+                    <div className="space-y-6 animate-fade-up py-8">
+                      <CheckCircle2 className="text-accent" size={36} strokeWidth={1.3} />
+                      <h2 className="font-display text-3xl md:text-4xl font-medium tracking-[-0.02em]">{t("contact.thanks.title")}</h2>
+                      <p className="text-muted-foreground font-light max-w-md">{t("contact.thanks.text")}</p>
                       <button
-                        type="submit"
-                        className="group inline-flex items-center gap-4 bg-foreground text-background px-8 py-4 text-xs tracking-[0.22em] uppercase hover:bg-accent hover:text-accent-foreground transition-colors"
+                        onClick={() => setSent(false)}
+                        className="inline-flex items-center gap-3 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors mt-4"
                       >
-                        {t("common.send")}
-                        <Send size={14} strokeWidth={1.6} className="transition-transform group-hover:translate-x-1" />
+                        {t("contact.thanks.again")}
                       </button>
                     </div>
-                  </form>
-                )}
+                  ) : (
+                    <form onSubmit={onSubmit} className="space-y-8">
+                      {/* Section: Personīgā informācija */}
+                      <div className="space-y-5">
+                        <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light flex items-center gap-3">
+                          <span className="inline-flex items-center justify-center w-5 h-5 border border-foreground/40 text-[10px]">1</span>
+                          Kontaktinformācija
+                        </div>
+                        <div className="grid gap-5 sm:grid-cols-2">
+                          <FieldLine id="firstName" label={t("contact.form.firstName")} placeholder="Jānis" value={form.firstName} onChange={(v) => setForm({ ...form, firstName: v })} required />
+                          <FieldLine id="lastName" label={t("contact.form.lastName")} placeholder="Bērziņš" value={form.lastName} onChange={(v) => setForm({ ...form, lastName: v })} required />
+                          <FieldLine id="email" type="email" label={t("contact.form.email")} placeholder="janis@uznemums.lv" value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
+                          <FieldLine id="phone" type="tel" label="Tālrunis" placeholder="+371 …" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} />
+                          <div className="sm:col-span-2">
+                            <FieldLine id="company" label={t("contact.form.company")} placeholder="Uzņēmuma nosaukums" value={form.company} onChange={(v) => setForm({ ...form, company: v })} />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="h-px bg-border" />
+
+                      {/* Section: Projekta informācija */}
+                      <div className="space-y-5">
+                        <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light flex items-center gap-3">
+                          <span className="inline-flex items-center justify-center w-5 h-5 border border-foreground/40 text-[10px]">2</span>
+                          Projekta informācija
+                        </div>
+
+                        <div className="space-y-2">
+                          <label htmlFor="subject" className="block text-xs font-medium text-foreground tracking-wide">
+                            Pieprasījuma tēma
+                          </label>
+                          <select
+                            id="subject"
+                            value={form.subject}
+                            onChange={(e) => setForm({ ...form, subject: e.target.value })}
+                            className="w-full bg-background border border-border focus:border-foreground focus:ring-0 outline-none px-4 py-3 text-sm font-light transition-colors"
+                          >
+                            <option value="">Izvēlieties produktu…</option>
+                            <option value="LVL sijas">LVL sijas</option>
+                            <option value="CLT Mini paneļi">CLT Mini paneļi</option>
+                            <option value="Akustiskie paneļi">Akustiskie paneļi</option>
+                            <option value="Ēvelēts koks">Ēvelēts koks</option>
+                            <option value="Dupleks paneļi">Dupleks paneļi</option>
+                            <option value="Cits">Cits / vispārīgs jautājums</option>
+                          </select>
+                        </div>
+
+                        <div className="space-y-2">
+                          <label htmlFor="message" className="block text-xs font-medium text-foreground tracking-wide">
+                            {t("contact.form.message")}<span className="text-accent ml-1">*</span>
+                          </label>
+                          <textarea
+                            id="message"
+                            required
+                            rows={6}
+                            placeholder="Aprakstiet projektu — izmēri, apjoms, termiņi, apdare. Pievienojiet rasējumus, ja tādi ir."
+                            value={form.message}
+                            onChange={(e) => setForm({ ...form, message: e.target.value })}
+                            className="w-full bg-background border border-border focus:border-foreground focus:ring-0 outline-none px-4 py-3 text-sm font-light placeholder:text-muted-foreground/60 resize-none transition-colors"
+                          />
+                          <p className="text-[11px] text-muted-foreground font-light">
+                            Failus (PDF, DWG, JPG) varat nosūtīt uz {company.email}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="h-px bg-border" />
+
+                      {/* Consent + submit */}
+                      <div className="space-y-6">
+                        <label className="flex items-start gap-3 cursor-pointer group">
+                          <input
+                            type="checkbox"
+                            required
+                            checked={form.consent}
+                            onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                            className="mt-1 h-4 w-4 border border-border accent-foreground"
+                          />
+                          <span className="text-xs text-muted-foreground font-light leading-relaxed">
+                            Piekrītu, ka mani dati tiek apstrādāti, lai sagatavotu piedāvājumu. Dati netiek nodoti trešajām pusēm.
+                          </span>
+                        </label>
+
+                        <div className="flex flex-wrap items-center gap-6 justify-between">
+                          <p className="text-xs text-muted-foreground font-light">
+                            Lauki ar <span className="text-accent">*</span> ir obligāti
+                          </p>
+                          <button
+                            type="submit"
+                            className="group inline-flex items-center gap-4 bg-foreground text-background px-8 py-4 text-xs tracking-[0.22em] uppercase hover:bg-accent hover:text-accent-foreground transition-colors"
+                          >
+                            Nosūtīt pieprasījumu
+                            <Send size={14} strokeWidth={1.6} className="transition-transform group-hover:translate-x-1" />
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  )}
+                </div>
               </div>
             </div>
           </div>
