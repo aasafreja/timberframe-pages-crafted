@@ -14,11 +14,12 @@ type FieldLineProps = {
   onChange: (v: string) => void;
   type?: string;
   required?: boolean;
+  placeholder?: string;
 };
 
-const FieldLine = ({ id, label, value, onChange, type = "text", required }: FieldLineProps) => (
-  <div className="space-y-3">
-    <label htmlFor={id} className="block text-[10px] uppercase tracking-[0.28em] text-muted-foreground font-light">
+const FieldLine = ({ id, label, value, onChange, type = "text", required, placeholder }: FieldLineProps) => (
+  <div className="space-y-2">
+    <label htmlFor={id} className="block text-xs font-medium text-foreground tracking-wide">
       {label}{required && <span className="text-accent ml-1">*</span>}
     </label>
     <input
@@ -27,7 +28,8 @@ const FieldLine = ({ id, label, value, onChange, type = "text", required }: Fiel
       required={required}
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full bg-transparent border-0 border-b border-foreground/20 focus:border-foreground focus:ring-0 outline-none px-0 py-2 text-base font-light transition-colors"
+      placeholder={placeholder}
+      className="w-full bg-background border border-border focus:border-foreground focus:ring-0 outline-none px-4 py-3 text-sm font-light placeholder:text-muted-foreground/60 transition-colors"
     />
   </div>
 );
