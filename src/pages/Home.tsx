@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Ruler, Clock, Leaf, Layers3, Globe2, Wrench, Home as HomeIcon, Blocks, Armchair } from "lucide-react";
+import { ArrowRight, Check, Ruler, Clock, Leaf, Layers3, Globe2, Wrench, Home as HomeIcon, Blocks, Armchair, Award, Download } from "lucide-react";
 import { products, stats } from "@/data/site";
 import heroImg from "@/assets/hero-thermowood.jpg";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -262,6 +262,51 @@ const Home = () => {
             >
               {t("home.process.cta")} <ArrowRight size={16} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CERTIFICATES */}
+      <section className="py-20 md:py-28 border-t border-border">
+        <div className="container-wide">
+          <div className="grid gap-12 lg:grid-cols-12 items-end mb-12">
+            <div className="lg:col-span-6">
+              <div className="eyebrow mb-4">Sertifikāti</div>
+              <h2 className="text-3xl md:text-5xl font-normal leading-[1.05]">
+                Sertificēta kvalitāte
+              </h2>
+            </div>
+            <div className="lg:col-span-5 lg:col-start-8">
+              <p className="text-muted-foreground font-light leading-relaxed">
+                Mūsu produkti atbilst Eiropas standartiem un ir sertificēti ražošanai un būvniecības pielietojumam.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-px bg-border border border-border md:grid-cols-2">
+            <div className="bg-background p-8 md:p-10 flex items-start gap-5">
+              <Award className="text-accent shrink-0 mt-1" size={32} strokeWidth={1.2} />
+              <div className="flex-1">
+                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Sertifikāts</div>
+                <h3 className="text-xl md:text-2xl font-normal mb-2">CE14080</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed mb-5">
+                  CE marķējums saskaņā ar EN 14080 standartu — līmētā koksne būvkonstrukcijām.
+                </p>
+                <a
+                  href="/certificates/CE14080.pdf"
+                  download
+                  className="inline-flex items-center gap-2 text-sm tracking-wide border-b border-foreground/40 pb-1 hover:border-foreground transition-colors"
+                >
+                  <Download size={14} /> Lejupielādēt PDF
+                </a>
+              </div>
+            </div>
+            <div className="bg-secondary/40 p-8 md:p-10 hidden md:flex items-center justify-center">
+              <div className="text-center max-w-xs">
+                <div className="font-display text-6xl md:text-7xl text-foreground/20 font-medium mb-3">CE</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">EN 14080</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
