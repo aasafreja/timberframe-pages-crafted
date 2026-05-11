@@ -411,7 +411,7 @@ export const translations: Record<Lang, Dict> = {
     "process.desc":
       "Caurspīdīgs četru soļu process, veidots tā, kā strādā arhitekti un attīstītāji.",
     "process.timeline.eyebrow": "Tipisks termiņš",
-    "process.timeline.title": "Lielākā daļa projektu tiek piegādāti 6 – 10 nedēļās.",
+    "process.timeline.title": "Vidēji 5 nedēļas no kontakta līdz pasūtījumam.",
     "process.faq.eyebrow": "BUJ",
     "process.faq.title": "Atbildes par procesu.",
     "process.step": "Solis",
