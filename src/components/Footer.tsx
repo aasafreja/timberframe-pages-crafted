@@ -11,7 +11,6 @@ export const Footer = () => {
     [t("nav.process"), "/process"],
     
     [t("nav.about"), "/about"],
-    [t("nav.specs"), "/specs"],
     [t("nav.contact"), "/contact"],
   ];
 
