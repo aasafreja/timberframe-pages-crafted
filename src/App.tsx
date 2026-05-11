@@ -10,7 +10,6 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Process from "./pages/Process";
 import About from "./pages/About";
-import Specs from "./pages/Specs";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -32,7 +31,7 @@ const App = () => (
             <Route path="/products/:slug" element={<ProductDetail />} />
             <Route path="/process" element={<Process />} />
             <Route path="/about" element={<About />} />
-            <Route path="/specs" element={<Specs />} />
+            
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />

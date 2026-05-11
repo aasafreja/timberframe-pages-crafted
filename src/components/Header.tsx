@@ -21,7 +21,6 @@ export const Header = () => {
     { to: "/process", label: t("nav.process") },
     
     { to: "/about", label: t("nav.about") },
-    { to: "/specs", label: t("nav.specs") },
     { to: "/pricing", label: "Cenas" },
     { to: "/contact", label: t("nav.contact") },
   ];
