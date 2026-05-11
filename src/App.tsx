@@ -11,6 +11,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Process from "./pages/Process";
 import About from "./pages/About";
 import Specs from "./pages/Specs";
+import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound.tsx";
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/process" element={<Process />} />
             <Route path="/about" element={<About />} />
             <Route path="/specs" element={<Specs />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
