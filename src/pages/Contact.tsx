@@ -45,8 +45,11 @@ const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     company: "",
+    subject: productParam ?? "",
     message: productParam ? t("contact.interested", { product: productParam }) : "",
+    consent: false,
   });
 
   useEffect(() => {
