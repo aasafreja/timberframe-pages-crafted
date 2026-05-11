@@ -121,7 +121,7 @@ export const translations: Record<Lang, Dict> = {
     "process.desc":
       "A transparent, four-step process designed around how architects and developers actually work.",
     "process.timeline.eyebrow": "Typical timeline",
-    "process.timeline.title": "Most projects ship in 6 – 10 weeks.",
+    "process.timeline.title": "Average 5 weeks from contact to order.",
     "process.faq.eyebrow": "FAQ",
     "process.faq.title": "Process questions, answered.",
     "process.step": "Step",
