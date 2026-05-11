@@ -21,7 +21,7 @@ const Pricing = () => {
         description="Tā kā visi mūsu produkti tiek ražoti pēc individuāliem pasūtījumiem, galīgā cena ir atkarīga no izmēriem, materiāla, apdares un apjoma."
         image={pricingHero}
         cta={{ label: t("nav.quote"), to: "/contact" }}
-        meta={["Individuāls aprēķins", "Bez MOQ", "50% avanss"]}
+        meta={["Individuāls aprēķins", "Bez minimālā apjoma", "50% avanss"]}
       />
 
       {/* INDICATIVE PRICES */}
