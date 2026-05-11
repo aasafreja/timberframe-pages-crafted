@@ -67,13 +67,13 @@ const Contact = () => {
     <>
       <PageHeader
         eyebrow={t("contact.eyebrow")}
-        title={t("contact.title")}
-        description={t("contact.desc")}
+        title="Sazinieties ar mums"
+        description="Vai jums ir projekts? Pastāstiet mums par to. Nosūtiet rasējumus, izmērus vai idejas — jebkurā formātā. Mēs sagatavosim individuālu piedāvājumu 24–48 stundu laikā."
         image={contactHero}
         overlay="strong"
         cta={{ label: t("common.send"), to: "#form" }}
         secondary={{ label: "+371 2929 5353", href: "tel:+37129295353" }}
-        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "LV · EN · DE"]}
+        meta={["Rīga, Latvija", "Pirmd. – Piektd. · 09 – 18", "Atbilde 24–48h"]}
       />
 
       <section id="form" className="py-20 md:py-32 bg-background">
