@@ -33,16 +33,16 @@ export const LanguageSwitcher = ({ variant = "header" }: Props) => {
         <span key={l.code} className="inline-flex items-center gap-2">
           <button
             onClick={() => setLang(l.code as Lang)}
-            className={`relative pb-0.5 transition-colors ${
+            className={`relative pb-0.5 transition-opacity ${
               lang === l.code
-                ? "text-foreground after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-foreground"
-                : "text-foreground/40 hover:text-foreground"
+                ? "opacity-100 after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-current"
+                : "opacity-50 hover:opacity-100"
             }`}
             aria-pressed={lang === l.code}
           >
             {l.label}
           </button>
-          {i < LANGS.length - 1 && <span className="text-foreground/20">/</span>}
+          {i < LANGS.length - 1 && <span className="opacity-30">/</span>}
         </span>
       ))}
     </div>
