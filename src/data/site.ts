@@ -242,7 +242,7 @@ export const projects: Project[] = [
 ];
 
 export const stats = [
-  { value: "25+", label: "Gadu pieredze" },
+  { value: "30+", label: "Gadu pieredze" },
   { value: "120+", label: "Realizēti projekti" },
   { value: "12", label: "Valstis" },
   { value: "100%", label: "Bez ķīmijas" },
