@@ -147,7 +147,7 @@ const Home = () => {
             ].map((item, idx) => (
               <div
                 key={item.title}
-                className={`group relative py-10 lg:py-12 px-0 lg:px-8 first:lg:pl-0 last:lg:pr-0 border-b sm:border-b-0 border-border ${idx > 0 ? "lg:border-l" : ""} ${idx % 2 === 1 ? "sm:border-l lg:border-l" : ""} ${idx < 2 ? "sm:border-b lg:border-b-0" : ""}`}
+                className={`group relative py-10 lg:py-12 px-0 lg:px-8 first:lg:pl-0 last:lg:pr-0 ${idx < 3 ? "border-b border-border" : ""} ${idx % 2 === 1 ? "sm:border-l sm:border-border" : ""} ${idx < 2 ? "sm:border-b sm:border-border" : ""} ${idx === 2 ? "sm:border-b-0" : ""} ${idx > 0 ? "lg:border-l lg:border-border" : ""} lg:border-b-0`}
               >
                 <div className="flex items-center justify-between mb-8">
                   <item.Icon className="text-foreground/70 group-hover:text-accent transition-colors" size={28} strokeWidth={1.2} />
