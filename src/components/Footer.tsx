@@ -8,6 +8,7 @@ export const Footer = () => {
 
   const NAV_LINKS: [string, string][] = [
     [t("nav.products"), "/products"],
+    ["Gatavās sienas", "/walls"],
     [t("nav.process"), "/process"],
     
     [t("nav.about"), "/about"],

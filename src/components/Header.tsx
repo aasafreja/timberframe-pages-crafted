@@ -18,6 +18,7 @@ export const Header = () => {
 
   const NAV = [
     { to: "/products", label: t("nav.products") },
+    { to: "/walls", label: "Gatavās sienas" },
     { to: "/process", label: t("nav.process") },
     
     { to: "/about", label: t("nav.about") },
