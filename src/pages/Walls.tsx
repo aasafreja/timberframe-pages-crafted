@@ -177,32 +177,71 @@ const Walls = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container-wide py-20 md:py-28 grid gap-12 lg:grid-cols-12 items-end">
-          <div className="lg:col-span-7">
-            <div className="eyebrow text-primary-foreground/60 mb-6">Sāciet projektu</div>
-            <h2 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-[-0.02em] font-light">
-              Nosūtiet rasējumus —<br />
-              sagatavosim individuālu piedāvājumu.
-            </h2>
-          </div>
-          <div className="lg:col-span-5 lg:col-start-8 space-y-6">
-            <ul className="space-y-3 text-primary-foreground/80 text-sm">
-              {["Atbilde 24–48 stundu laikā", "Bez maksas konsultācija", "Piegāde visā ES"].map((b) => (
-                <li key={b} className="flex items-start gap-3">
-                  <Check size={16} className="mt-0.5 text-primary-foreground/60" strokeWidth={1.6} />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-3 text-primary-foreground text-sm tracking-wide border-b border-primary-foreground/60 pb-1.5 hover:border-primary-foreground transition-colors"
-            >
-              <FileText size={16} strokeWidth={1.6} />
-              Nosūtīt rasējumus
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+      <section className="relative bg-primary text-primary-foreground overflow-hidden">
+        {/* Decorative accents */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_20%_30%,hsl(var(--accent))_0%,transparent_50%),radial-gradient(circle_at_80%_70%,hsl(var(--primary-foreground))_0%,transparent_45%)]"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/40 to-transparent"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/40 to-transparent"
+        />
+
+        <div className="container-wide relative py-24 md:py-36">
+          <div className="grid gap-14 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-3 mb-8">
+                <span className="h-px w-10 bg-accent" />
+                <span className="eyebrow text-accent">Sāciet projektu</span>
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.03em] font-light">
+                Nosūtiet rasējumus —<br />
+                <span className="text-accent">sagatavosim piedāvājumu.</span>
+              </h2>
+              <p className="mt-8 text-lg text-primary-foreground/70 max-w-xl leading-relaxed font-light">
+                Individuāls risinājums jūsu projektam. Atbildam ātri, ražojam precīzi.
+              </p>
+
+              <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-5">
+                <Link
+                  to="/contact"
+                  className="group inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 text-sm tracking-wide hover:bg-accent/90 transition-colors"
+                >
+                  <FileText size={16} strokeWidth={1.8} />
+                  Nosūtīt rasējumus
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-sm tracking-wide text-primary-foreground/80 border-b border-primary-foreground/40 pb-1.5 hover:text-primary-foreground hover:border-primary-foreground transition-colors"
+                >
+                  Sazināties tieši
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 lg:col-start-8">
+              <div className="border border-primary-foreground/15 bg-primary-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+                <div className="text-xs uppercase tracking-[0.22em] text-primary-foreground/50 mb-6">
+                  Ko jūs saņemat
+                </div>
+                <ul className="space-y-5">
+                  {["Atbilde 24–48 stundu laikā", "Bez maksas konsultācija", "Piegāde visā ES"].map((b) => (
+                    <li key={b} className="flex items-start gap-4">
+                      <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-accent shrink-0">
+                        <Check size={14} strokeWidth={2} />
+                      </span>
+                      <span className="text-primary-foreground/90">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
