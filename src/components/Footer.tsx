@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
+
 
 import { company } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
