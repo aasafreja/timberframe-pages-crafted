@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
+
 
 import { company } from "@/data/site";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -33,9 +35,8 @@ export const Footer = () => {
       <div className="container-wide pt-20 pb-10 md:pt-28 md:pb-12">
         <div className="grid gap-14 md:gap-20 md:grid-cols-12">
           <div className="md:col-span-5 space-y-8">
-            <p className="font-display text-3xl md:text-4xl leading-[1.1] font-normal max-w-md text-primary-foreground">
-              Timber Smart Solution
-            </p>
+            <img src={logo} alt="Timber Smart Solution" className="h-16 md:h-20 w-auto brightness-0 invert" />
+
 
             <div className="space-y-1 text-sm text-primary-foreground/60 font-light leading-relaxed">
               <div>{company.address}</div>
